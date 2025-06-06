@@ -6,7 +6,7 @@ Welcome to my professional site. I'm a PhD candidate in Molecular Biology at the
 
 ## 🎯 Objective
 
-To apply data-driven approaches and advanced computational tools to decode complex biological systems and drive therapeutic discovery in immune-related disease.
+To apply data-driven approaches and advanced computational tools to decode complex biological systems and drive therapeutic discovery in immune-related disease. 
 
 ---
 
