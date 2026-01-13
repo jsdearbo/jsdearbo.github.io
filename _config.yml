@@ -36,7 +36,7 @@ navigation:
 # Author information
 author:
   name   : "Jake Dearborn"
-  avatar : "/assets/images/headshot.jpg"  # optional, can remove if you don't want a photo
+  avatar : "/assets/images/headshot.jpg"
   bio    : "PhD candidate in Molecular Biology specializing in regulatory genomics, splicing biology, and deep learning."
   location: "Vermont, USA"
   links:
