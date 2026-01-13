@@ -50,6 +50,6 @@ My dissertation, **“Programmed Delayed Splicing and Immune Cell Type–Specifi
 
 ## Contact
 
-Email: **jake.dearborn@gmail.com**  
+Email: **jakedearborn@gmail.com**  
 GitHub: https://github.com/jakedearborn  
 LinkedIn: https://www.linkedin.com/in/jakedearborn  
