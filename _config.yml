@@ -19,7 +19,8 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-
+  - jekyll-include-cache
+  
 # Navigation (top menu)
 navigation:
   - title: "Home"
