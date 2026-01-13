@@ -1,3 +1,10 @@
+---
+title: "Projects"
+layout: single
+permalink: /projects/
+author_profile: true
+---
+
 # Projects
 
 This page highlights selected computational and experimental projects. Most are part of active research programs and not yet public repositories.
