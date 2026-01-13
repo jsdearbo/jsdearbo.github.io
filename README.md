@@ -1,90 +1,157 @@
-# Jake Dearborn
+# Jake Dearborn, PhD Candidate  
+**Computational Genomics · Machine Learning · RNA Biology**
 
-Welcome to my professional site. I'm a PhD candidate in Molecular Biology at the University of Vermont with a strong foundation in **computational genomics**, **machine learning**, and **immune transcriptomics**. My research integrates statistical modeling and deep learning to study gene regulation, with a focus on splicing and immune signaling pathways. I'm currently seeking industry opportunities in **biotechnology** or **computational biology** (starting 2026).
+Welcome. I am a late-stage PhD candidate in **Molecular Biology** at the **University of Vermont (Larner College of Medicine)** working at the intersection of **regulatory genomics, RNA biology, and deep learning**. My research focuses on decoding **cell-type–specific alternative splicing programs** and **splicing kinetics** in immune cells using large-scale sequencing data and foundation-model–based approaches.
 
----
-
-## 🎯 Objective
-
-To apply data-driven approaches and advanced computational tools to decode complex biological systems and drive therapeutic discovery in immune-related disease. 
+I am actively preparing for **industry roles in computational genomics, machine learning for biology, and regulatory sequence modeling** beginning in 2026.
 
 ---
 
-## 🧠 Research Focus
+## Research Focus
 
-- Regulatory mechanisms of splicing and immune signaling  
-- Single-cell RNA-seq, CRISPR screening, and multi-omics integration  
-- Deep learning applications in transcriptomics and protein modeling  
+My work combines experimental RNA biology with modern machine learning to understand how sequence encodes regulatory function, with an emphasis on:
 
----
+- **Programmed delayed splicing** and intron retention dynamics in inflammatory gene programs (NF-κB transcriptome)  
+- **Immune cell type–specific alternative splicing regulation** (B cells, T cells, macrophages)  
+- **Cis-regulatory motif discovery** in introns and exons using deep learning and attribution methods  
+- **Fine-tuning and interpreting foundation models** (e.g. Borzoi) for splicing and RNA processing tasks  
+- **Sequence-to-function modeling** for therapeutic target discovery  
 
-## 🛠️ Technical Skills
-
-**Languages & Tools:** Python, R, Bash, Nextflow, Git, Docker  
-**Genomics & NGS:** RNA-seq, scRNA-seq, ChIP-seq, CRISPR screens, Cell Ranger, Seurat, DESeq2  
-**Modeling & Analysis:** PCA, UMAP, supervised/unsupervised learning, TensorFlow, PyTorch  
-**Pipelines:** Custom workflows, HPC/SLURM, AWS, reproducible Nextflow pipelines  
-**Wet Lab:** Flow cytometry, ELISA, LNP delivery, rodent models, GLP/GXP compliance  
+This work forms the basis of my dissertation:  
+**“Programmed Delayed Splicing and Immune Cell Type–Specific Alternative Splicing.”**
 
 ---
 
-## 🧪 Academic & Industry Experience
+## Technical Expertise
 
-**PhD Researcher**, University of Vermont (2021 – Present)  
-- Computational analysis of immune signaling in scRNA-seq and bulk RNA-seq datasets  
-- Developed machine learning models for genotype-phenotype prediction  
-- Authored multiple peer-reviewed publications on gene regulation and inflammation  
+### Programming & Machine Learning
+- Python, R, Bash  
+- PyTorch, TensorFlow, PyTorch Lightning  
+- Custom model architectures, LoRA/PEFT fine-tuning, mixed-precision training  
+- Feature attribution: DeepLIFT, DeepSHAP, Captum  
+- Motif discovery: TF-MoDISco, MEME, FIMO, tangermeme  
 
-**QC Specialist**, Prolytix (2018 – 2021)  
-- GXP-compliant assay development, protocol optimization, and CAPA resolution  
+### Genomics & Transcriptomics
+- Bulk RNA-seq, **single-cell RNA-seq**, nascent RNA analysis  
+- STAR, StringTie, rMATS, DESeq2, Scanpy, Seurat  
+- PSI / intron retention quantification, isoform-level analysis  
+- Genome interval engineering, BigWig workflows, PyBigWig  
 
-**Lab Manager**, Weiss Lab (2015 – 2018)  
-- Led preclinical studies in stem cell therapy and scaffold engineering  
+### Regulatory Sequence Modeling
+- Foundation models (Borzoi, gReLU, SpliceAI, Pangolin, BPNet)  
+- In silico mutagenesis, motif ablation, sequence perturbation analysis  
+- RBP motif integration and expression-aware regulatory modeling  
+
+### Infrastructure & Reproducibility
+- **HPC / SLURM**, multi-GPU workflows, CPU fallback strategies  
+- Conda, environment isolation, reproducible pipelines  
+- Git, GitHub, YAML/JSON-driven experiment configs  
+- VSCode remote development, Overleaf/LaTeX automation  
+
+---
+
+## Selected Research Projects
+
+### Programmed Delayed Splicing in Inflammatory Gene Regulation  
+First-author project defining intron-specific splicing delays across the NF-κB transcriptome, integrating kinetic RNA-seq, splicing metrics (CoSI), and regulatory sequence analysis.
+
+### Decoding Immune Cell Type–Specific Splicing Regulatory Programs  
+Ongoing work applying deep learning, motif discovery, and RBP integration to identify regulatory programs distinguishing B cells, T cells, and macrophages.
+
+### Foundation Model Fine-Tuning for Splicing Prediction  
+Custom fine-tuning and interpretation of Borzoi-based models for PSI and intron retention prediction, including attribution-driven motif discovery and in silico perturbation.
+
+---
+
+## Publications & Preprints
+
+- **Dearborn, J., Frankiw, L., Majumdar, D.**  
+  *Programmed delayed splicing regulates inflammatory gene expression.*  
+  **eLife** (in review)
+
+- **Dearborn, J., et al.**  
+  *Decoding immune cell type–specific alternative splicing regulatory programs.*  
+  Manuscript in preparation (2026)
+
+- **Distinct Inflammatory Programs Underlie the Intramuscular Lipid Nanoparticle Response.**  
+  *ACS Nano* (2024)
+
+- **Early Adipose Tissue Wasting in a Model of Lung Cancer Cachexia.**  
+  *bioRxiv* (2024)
+
+- **Comparative Immunogenicity of Decellularized Pig Lungs.**  
+  *Biomaterials* (2021)
+
+Full publication list available in my CV.
+
+---
+
+## Presentations & Talks
+
+- *Leveraging Foundational Genomics Models to Identify Putative mRNA Splice Regulators*  
+- *Decoding CD45 Alternative Splicing Using Deep Learning*  
+- *Transformer Models in Genomics* (Guest lecture)  
+- *Selective RNA Depletion to Enhance Single-Cell Transcriptomics*  
+
+---
+
+## Professional Experience
+
+**PhD Researcher – University of Vermont (2021–Present)**  
+- Designed and implemented computational pipelines for splicing kinetics and regulatory analysis  
+- Built and fine-tuned deep learning models for sequence-based splicing prediction  
+- Integrated large-scale RNA-seq, single-cell, and regulatory sequence data  
+- Led motif discovery and attribution analyses to identify candidate regulatory elements  
+
+**QC Specialist – Prolytix (2018–2021)**  
+- GxP-compliant assay development and validation in a regulated biotech environment  
+- Protocol optimization, deviation investigation, CAPA implementation  
+
+**Lab Manager – Weiss Lab (2015–2018)**  
+- Managed preclinical studies in stem cell therapy and biomaterials  
 - Supervised technicians and maintained regulatory compliance  
 
 ---
 
-## 📄 Selected Publications
-
-- **Distinct Inflammatory Programs Underlie the Intramuscular Lipid Nanoparticle Response.** *ACS Nano* (2024)  
-- **Early Adipose Tissue Wasting in a Model of Lung Cancer Cachexia.** *bioRxiv* (2024)  
-- **Comparative Immunogenicity of Decellularized Pig Lungs.** *Biomaterials* (2021)  
-- *(Full list available in [CV](./CV_may_2025.pdf))*
-
----
-
-## 🎤 Recent Presentations
-
-- *Leveraging Foundational Genomics Modeling to Identify Putative mRNA Splice Regulators*  
-- *Exploring CD45 Alternative Splice Regulation using Deep Learning*  
-- *Guest Lecture: Transformer Models in Genomics*  
-- *Enhancing Single-Cell Transcriptomics with Selective RNA Depletion*  
-
----
-
-## 👥 Leadership & Outreach
+## Leadership & Service
 
 - President, Career Mobility Committee (graduate careers beyond academia)  
 - Education Committee Representative, UVM CMB PhD Program  
-- Mentor, DREAM Program for underserved youth  
+- Mentor, DREAM Program (STEM outreach for underserved youth)  
+- HOA Board Member (finance and infrastructure oversight)  
 
 ---
 
-## 🎓 Education
+## Education
 
-**PhD Candidate**, Molecular Biology – University of Vermont *(Expected June 2026)*  
-Research in immunology, splicing, and machine learning in transcriptomics  
+**PhD Candidate, Molecular Biology** – University of Vermont  
+Expected completion: **June 2026**
 
-**B.S. Neuroscience** & **B.A. Psychology**, University of Vermont (2014)
-
----
-
-## 📬 Contact
-
-📧 **jake.dearborn [at] gmail.com**  
-🔗 [GitHub](https://github.com/jakedearborn) | [LinkedIn](https://www.linkedin.com/in/jakedearborn)  
-📄 [Full CV (PDF)](./CV_may_2025.pdf)
+**B.S. Neuroscience & B.A. Psychology** – University of Vermont (2014)
 
 ---
 
-> *Interests: computational immunology, protein modeling, generative AI in therapeutics, peptide design, immune evasion mechanisms, science communication, fishing, motorcycling.*
+## Career Interests
+
+I am seeking roles in:
+
+- **Computational genomics / regulatory genomics**  
+- **Machine learning for biology / therapeutic discovery**  
+- **Sequence modeling, splicing regulation, RNA biology**  
+- **Foundation model development and interpretation**
+
+I am particularly interested in environments that combine **large-scale models, biological insight, and translational impact** (e.g., Arc, Calico, Genentech, Flagship-style ventures, biotech AI groups).
+
+---
+
+## Contact
+
+Email: **jake.dearborn@gmail.com**  
+GitHub: https://github.com/jakedearborn  
+LinkedIn: https://www.linkedin.com/in/jakedearborn  
+
+CV (PDF): `CV_may_2025.pdf`
+
+---
+
+> *Personal Interests: computational immunology, protein modeling, generative AI in therapeutics, peptide design, immune evasion mechanisms, science communication, fishing, motorcycling.*
