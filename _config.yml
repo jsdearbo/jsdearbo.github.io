@@ -1,0 +1,86 @@
+title: "Jake Dearborn"
+subtitle: "Computational Genomics · Machine Learning · RNA Biology"
+name: "Jake Dearborn"
+description: "PhD candidate in Molecular Biology at the University of Vermont working at the intersection of regulatory genomics, RNA biology, and deep learning."
+url: "https://jsdearbo.github.io"
+baseurl: ""
+
+remote_theme: "mmistakes/minimal-mistakes"
+
+# Site settings
+locale: "en-US"
+timezone: "America/New_York"
+
+# Skin options: default, dark, air, mint, contrast, neon, plum, sunrise
+minimal_mistakes_skin: "default"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Navigation (top menu)
+navigation:
+  - title: "Home"
+    url: /
+  - title: "Research"
+    url: /research/
+  - title: "Projects"
+    url: /projects/
+  - title: "Publications"
+    url: /publications/
+  - title: "CV"
+    url: /CV_may_2025.pdf
+
+# Author information
+author:
+  name   : "Jake Dearborn"
+  avatar : "/assets/images/headshot.jpg"  # optional, can remove if you don't want a photo
+  bio    : "PhD candidate in Molecular Biology specializing in regulatory genomics, splicing biology, and deep learning."
+  location: "Vermont, USA"
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:jakedearborn@gmail.com"
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/jsdearbo"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/jake-dearborn-15408652/"
+
+# Footer links
+footer:
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:jakedearborn@gmail.com"
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/jsdearbo"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/jake-dearborn-15408652/"
+
+# Defaults for pages
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: false
+      share: false
+      related: false
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+
+# Build settings
+permalink: pretty
+paginate: 5
+paginate_path: /page:num/
