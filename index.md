@@ -1,3 +1,10 @@
+---
+title: "Home"
+layout: single
+permalink: /
+author_profile: true
+---
+
 # Jake Dearborn, PhD Candidate  
 **Computational Genomics · Machine Learning · RNA Biology**
 
