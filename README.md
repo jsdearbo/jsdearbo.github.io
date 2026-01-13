@@ -72,7 +72,7 @@ To apply data-driven approaches and advanced computational tools to decode compl
 
 ## 🎓 Education
 
-**PhD Candidate**, Molecular Biology – University of Vermont *(Expected May 2026)*  
+**PhD Candidate**, Molecular Biology – University of Vermont *(Expected June 2026)*  
 Research in immunology, splicing, and machine learning in transcriptomics  
 
 **B.S. Neuroscience** & **B.A. Psychology**, University of Vermont (2014)
