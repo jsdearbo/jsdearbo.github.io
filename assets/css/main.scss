@@ -1,0 +1,54 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main lib
+
+/* Custom Overrides for a Professional Portfolio Look */
+
+/* 1. Reduce base font size (Minimal Mistakes default is quite large) */
+html {
+  font-size: 16px; /* Default was often 18px-20px */
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* 2. Increase the maximum width of the content container */
+.archive, .page {
+  width: 100%;
+  max-width: 1200px; /* Increased from ~800px */
+}
+
+/* 3. Adjust the sidebar width so it doesn't take up too much room on wide screens */
+@media (min-width: 64em) {
+  .sidebar {
+    width: 250px;
+  }
+}
+
+/* 4. Tweak headers to be slightly more compact */
+.page__title {
+  font-size: 2rem !important;
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
+
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.3em;
+  margin-top: 1.5em;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+/* 5. Make the "wide" class even more expansive */
+.wide {
+  max-width: 1300px !important;
+}
