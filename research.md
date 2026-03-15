@@ -1,7 +1,15 @@
+---
+title: "Research"
+layout: single
+permalink: /research/
+author_profile: true
+---
 
 My research integrates **RNA biology, regulatory genomics, and deep learning** to understand how genomic sequence encodes splicing regulation and how these regulatory programs differ across immune cell types.
 
 The central goal of my work is to move from descriptive catalogs of splicing events toward **predictive and mechanistic models of RNA regulation** that operate directly on sequence.
+
+> **Industry relevance:** I focus on building computational approaches that are not only accurate, but also interpretable, scalable, and useful for downstream biological decision-making.
 
 ---
 
@@ -41,10 +49,10 @@ I am actively adapting large genomic foundation models (e.g., **Borzoi**) for sp
 
 This work includes:
 
-- fine-tuning models for **PSI and intron retention prediction**
-- modeling **cell-type–specific splicing behavior**
-- performing **in silico mutagenesis** to test regulatory elements
-- extracting interpretable regulatory motifs using attribution
+- Fine-tuning models for **PSI and intron retention prediction**
+- Modeling **cell-type–specific splicing behavior**
+- Performing **in silico mutagenesis** to test regulatory elements
+- Extracting interpretable regulatory motifs using attribution
 
 These experiments combine **LoRA/PEFT fine-tuning**, mixed-precision training, and large-scale attribution analysis to identify regulatory features learned by deep models.
 

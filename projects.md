@@ -7,11 +7,11 @@ author_profile: true
 
 # Projects
 
-# Projects
+Below are selected **technical systems and modeling frameworks** I have developed for splicing analysis and deep learning in regulatory genomics.
 
-Below are selected **technical systems and modeling frameworks** I have developed to support large-scale splicing analysis and deep learning in regulatory genomics.
+> **Industry relevance:** These projects emphasize reproducible pipelines, scalable model training, and interpretable outputs that support decision-making in genomics R&D environments.
 
-Many of these systems are part of active research projects and therefore not yet public repositories.
+Many of these systems are part of active research efforts and are not yet public repositories.
 
 ---
 
@@ -130,3 +130,10 @@ Genomics workflows are I/O-heavy, brittle, and hard to reproduce across environm
 **Outcome:**  
 Stable, repeatable execution across large datasets and multiple projects.
 
+
+
+---
+
+## Looking for in My Next Role
+
+I am excited to apply this toolkit in industry settings where computational methods directly accelerate biological discovery, target validation, and translational research.
