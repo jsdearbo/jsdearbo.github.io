@@ -7,6 +7,8 @@ author_profile: true
 
 # Publications & Preprints
 
+A selection of publications spanning inflammation, transcriptomics, and computational analysis. Full citation details are available in my CV.
+
 ---
 
 ## Peer-Reviewed
@@ -47,4 +49,4 @@ Manuscript in preparation (2026)
 
 ---
 
-Full publication list available in my CV.
+If you'd like a publication packet tailored to a specific role, feel free to reach out.
