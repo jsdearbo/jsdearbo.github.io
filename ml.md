@@ -42,6 +42,7 @@ Methods I use include:
 - TF-MoDISco motif discovery from attribution maps
 - Motif validation/scanning with MEME and FIMO
 - In silico mutagenesis and motif ablation experiments
+- UMAP visualization of learned embedding vectors
 
 ---
 
