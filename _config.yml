@@ -29,6 +29,8 @@ navigation:
     url: /research/
   - title: "Projects"
     url: /projects/
+  - title: "ML Work"
+    url: /ml/
   - title: "Publications"
     url: /publications/
   - title: "CV"
