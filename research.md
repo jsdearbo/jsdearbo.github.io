@@ -67,5 +67,5 @@ These approaches are used to identify candidate **RNA-binding protein motifs** a
 
 ## Dissertation
 
-**Programmed Delayed Splicing and Immune Cell Type–Specific Alternative Splicing**  
+**Timing and Specificity in the Immune Transcriptome: Unraveling Splicing Dynamics through Computational Regulatory Genomics**  
 PhD Dissertation, University of Vermont (expected June 2026)
