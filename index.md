@@ -101,6 +101,6 @@ If you are hiring for roles in computational genomics or ML for biology, I would
 
 ## Contact
 
-Email: **jakedearborn@gmail.com**  
-GitHub: https://github.com/jsdearbo 
-LinkedIn: https://www.linkedin.com/in/jake-dearborn-15408652/
+- Email: [jakedearborn@gmail.com](mailto:jakedearborn@gmail.com)
+- GitHub: [https://github.com/jsdearbo](https://github.com/jsdearbo)
+- LinkedIn: [https://www.linkedin.com/in/jake-dearborn-15408652/](https://www.linkedin.com/in/jake-dearborn-15408652/)
