@@ -15,7 +15,7 @@ This page highlights the machine learning side of my research for teams hiring M
 
 I build sequence-to-function models that map genomic sequence to splicing outcomes such as exon inclusion and intron retention. These models are designed for cell-type-aware prediction tasks and downstream hypothesis generation.
 
-I also maintain tooling in my repository **`sequence_to_function_model_tools`** to support training, evaluation, and reproducible experimentation.
+I also maintain tooling in my repository [**`sequence_to_function_model_tools`**](https://github.com/jsdearbo/sequence_to_function_model_tools) to support training, evaluation, and reproducible experimentation.
 
 ---
 
