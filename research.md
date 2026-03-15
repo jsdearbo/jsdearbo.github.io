@@ -1,7 +1,5 @@
 # Research
 
-# Research
-
 My research integrates **RNA biology, regulatory genomics, and deep learning** to understand how genomic sequence encodes splicing regulation and how these regulatory programs differ across immune cell types.
 
 The central goal of my work is to move from descriptive catalogs of splicing events toward **predictive and mechanistic models of RNA regulation** that operate directly on sequence.
