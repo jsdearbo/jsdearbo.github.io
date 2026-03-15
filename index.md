@@ -5,7 +5,7 @@ permalink: /
 author_profile: true
 ---
 
-# Jake Dearborn, PhD Candidate  
+# Jake Dearborn, PhD Candidate (Defending 2026)
 **Computational Genomics · Machine Learning · RNA Biology**
 
 I am a late-stage PhD candidate in **Molecular Biology** at the **University of Vermont (Larner College of Medicine)** working at the intersection of **regulatory genomics, RNA biology, and deep learning**. My research focuses on decoding **cell-type–specific alternative splicing programs** and **splicing kinetics** in immune cells using large-scale sequencing data and foundation-model–based approaches.
@@ -14,22 +14,40 @@ I am actively preparing for **industry roles in computational genomics, machine 
 
 ---
 
-## Research Interests
+## Research Focus
 
-- Programmed delayed splicing and intron retention in inflammatory gene programs  
-- Immune cell type–specific alternative splicing regulation (B cells, T cells, macrophages)  
-- Cis-regulatory motif discovery using deep learning and attribution methods  
-- Fine-tuning and interpretation of foundation models (e.g. Borzoi) for RNA processing  
-- Sequence-to-function modeling for therapeutic discovery  
+- Sequence-to-function modeling of regulatory genomics  
+- Alternative splicing regulation across immune cell types  
+- Splicing kinetics and delayed intron removal in inflammatory programs  
+- Deep learning model interpretation for regulatory motif discovery  
+- Fine-tuning foundation models (e.g., Borzoi) for RNA processing tasks
 
 ---
 
 ## Technical Focus
 
-- **Machine Learning:** PyTorch, TensorFlow, PyTorch Lightning, LoRA/PEFT, mixed-precision training  
-- **Regulatory Genomics:** RNA-seq, scRNA-seq, PSI/IR analysis, rMATS, StringTie, STAR  
-- **Attribution & Motifs:** DeepLIFT, DeepSHAP, Captum, TF-MoDISco, MEME, FIMO, tangermeme  
-- **Infrastructure:** HPC/SLURM, multi-GPU workflows, Conda, reproducible pipelines  
+**Machine Learning**
+- PyTorch, PyTorch Lightning
+- Transformer architectures
+- Representation learning
+- Mixed-precision and multi-GPU training
+- Experiment tracking (WandB) and hyperparameter search (Optuna)
+
+**Computational Genomics**
+- RNA-seq and scRNA-seq analysis
+- PSI / intron retention modeling
+- rMATS, StringTie, STAR
+- Genomic interval engineering and large-scale annotation workflows
+
+**Model Interpretation**
+- DeepLIFT / DeepSHAP (Captum)
+- TF-MoDISco motif discovery
+- MEME / FIMO motif scanning
+
+**Infrastructure**
+- HPC / SLURM orchestration
+- Conda environments
+- reproducible pipeline development
 
 ---
 
@@ -51,5 +69,5 @@ My dissertation, **“Programmed Delayed Splicing and Immune Cell Type–Specifi
 ## Contact
 
 Email: **jakedearborn@gmail.com**  
-GitHub: https://github.com/jakedearborn  
-LinkedIn: https://www.linkedin.com/in/jakedearborn  
+GitHub: https://github.com/jsdearbo 
+LinkedIn: https://www.linkedin.com/in/jake-dearborn-15408652/

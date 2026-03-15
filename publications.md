@@ -9,18 +9,6 @@ author_profile: true
 
 ---
 
-## In Review / In Preparation
-
-**Dearborn, J., Frankiw, L., Majumdar, D.**  
-*Programmed delayed splicing regulates inflammatory gene expression.*  
-**eLife** (in review)
-
-**Dearborn, J., et al.**  
-*Decoding immune cell type–specific alternative splicing regulatory programs.*  
-Manuscript in preparation (2026)
-
----
-
 ## Peer-Reviewed
 
 **Distinct Inflammatory Programs Underlie the Intramuscular Lipid Nanoparticle Response.**  
@@ -29,12 +17,24 @@ Manuscript in preparation (2026)
 **Comparative Immunogenicity of Decellularized Pig Lungs.**  
 *Biomaterials* (2021)
 
+**Early Adipose Tissue Wasting in a Model of Lung Cancer Cachexia.**  
+*Cell Reports* (2025)
+
 ---
 
 ## Preprints
 
-**Early Adipose Tissue Wasting in a Model of Lung Cancer Cachexia.**  
-*bioRxiv* (2024)
+**Dearborn, J., Frankiw, L., Majumdar, D.**  
+*Programmed delayed splicing regulates inflammatory gene expression.*  
+**eLife** (in review)
+
+---
+
+## In Preparation
+
+**Dearborn, J., et al.**  
+*Decoding immune cell type–specific alternative splicing regulatory programs.*  
+Manuscript in preparation (2026)
 
 ---
 

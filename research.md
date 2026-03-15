@@ -1,8 +1,10 @@
 # Research
 
-My research integrates **RNA biology, regulatory genomics, and deep learning** to understand how sequence encodes splicing regulation and how alternative splicing programs differ across immune cell types.
+# Research
 
-The unifying goal of my work is to move beyond descriptive splicing catalogs toward **mechanistic, sequence-resolved models** of splicing regulation that are interpretable and therapeutically relevant.
+My research integrates **RNA biology, regulatory genomics, and deep learning** to understand how genomic sequence encodes splicing regulation and how these regulatory programs differ across immune cell types.
+
+The central goal of my work is to move from descriptive catalogs of splicing events toward **predictive and mechanistic models of RNA regulation** that operate directly on sequence.
 
 ---
 
@@ -38,14 +40,16 @@ The goal is to define **regulatory programs**, not just individual events, that 
 
 ## Foundation Model Fine-Tuning for Splicing Prediction
 
-I am actively fine-tuning and interpreting foundation models (e.g. **Borzoi**) for splicing-related tasks, including:
+I am actively adapting large genomic foundation models (e.g., **Borzoi**) for splicing-related tasks.
 
-- PSI and intron retention prediction  
-- Cell-type–specific splicing behavior  
-- Attribution-driven motif discovery  
-- In silico mutagenesis and motif ablation  
+This work includes:
 
-This work combines **LoRA/PEFT fine-tuning**, mixed-precision training, and large-scale attribution to extract biologically meaningful regulatory signals from deep models.
+- fine-tuning models for **PSI and intron retention prediction**
+- modeling **cell-type–specific splicing behavior**
+- performing **in silico mutagenesis** to test regulatory elements
+- extracting interpretable regulatory motifs using attribution
+
+These experiments combine **LoRA/PEFT fine-tuning**, mixed-precision training, and large-scale attribution analysis to identify regulatory features learned by deep models.
 
 ---
 

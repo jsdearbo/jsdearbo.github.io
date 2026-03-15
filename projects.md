@@ -7,9 +7,11 @@ author_profile: true
 
 # Projects
 
-This page highlights selected **technical projects and systems** I have built to support large-scale splicing analysis, regulatory modeling, and deep learning in genomics. Most are part of active research programs and are not yet public repositories.
+# Projects
 
-The emphasis here is on **infrastructure, modeling, and execution**.
+Below are selected **technical systems and modeling frameworks** I have developed to support large-scale splicing analysis and deep learning in regulatory genomics.
+
+Many of these systems are part of active research projects and therefore not yet public repositories.
 
 ---
 
@@ -53,10 +55,10 @@ Produced clean, high-confidence labels for training sequence-based splicing mode
 
 ---
 
-## Borzoi Fine-Tuning & Interpretation Framework
+## Borzoi Fine-Tuning & Model Interpretation Framework
 
 **What it does:**  
-Adapts foundation models for splicing prediction and regulatory discovery.
+Adapts large genomic foundation models for splicing prediction, regulatory discovery, and model interpretation.
 
 **How it’s built:**
 - Custom PyTorch Lightning wrappers around Borzoi  
