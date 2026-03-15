@@ -8,9 +8,31 @@ author_profile: true
 # Jake Dearborn, PhD Candidate (Defending 2026)
 **Computational Genomics · Machine Learning · RNA Biology**
 
-I am a late-stage PhD candidate in **Molecular Biology** at the **University of Vermont (Larner College of Medicine)** working at the intersection of **regulatory genomics, RNA biology, and deep learning**. My research focuses on decoding **cell-type–specific alternative splicing programs** and **splicing kinetics** in immune cells using large-scale sequencing data and foundation-model–based approaches.
+I am a late-stage PhD candidate in **Molecular Biology** at the **University of Vermont (Larner College of Medicine)** working at the intersection of **regulatory genomics, RNA biology, and deep learning**. I build sequence-to-function models and large-scale RNA-seq analysis systems to decode **cell-type–specific alternative splicing programs** and **splicing kinetics** in immune cells.
 
-I am actively preparing for **industry roles in computational genomics, machine learning for biology, and regulatory sequence modeling** beginning in 2026.
+I am actively exploring **industry roles in computational genomics, ML for biology, and regulatory sequence modeling** starting in 2026.
+
+---
+
+## Quick Fit for Industry Teams
+
+- Build production-minded computational pipelines for high-volume sequencing datasets
+- Train and fine-tune deep learning models (including foundation models) for biological prediction tasks
+- Translate model outputs into interpretable hypotheses through attribution and motif discovery
+- Partner across computational and experimental stakeholders to move from data to decisions
+
+---
+
+## Current Focus & Role Targets
+
+I am most interested in roles where I can contribute to:
+
+- **Regulatory genomics and RNA modeling**
+- **Applied ML in biotech and genomics platforms**
+- **Model interpretation and mechanistic discovery**
+- **Scientific software and reproducible data infrastructure**
+
+Target roles include **Computational Biologist, Machine Learning Scientist (Genomics), Bioinformatics Scientist, and Applied Scientist (ML for Biology)**.
 
 ---
 
@@ -57,12 +79,24 @@ My dissertation, **“Programmed Delayed Splicing and Immune Cell Type–Specifi
 
 ---
 
+## Selected Strengths
+
+- Designed end-to-end intron kinetics workflows from alignment to statistical summarization
+- Built cell-type-aware labeling systems for supervised training of splicing models
+- Adapted large genomic models with task-specific fine-tuning (LoRA/PEFT)
+- Performed attribution-driven motif discovery with TF-MoDISco and downstream validation tools
+
+---
+
 ## Navigation
 
 - [Research](./research.md)  
 - [Projects](./projects.md)  
+- [Machine Learning Work](./ml.md)  
 - [Publications](./publications.md)  
 - [Download my CV](/Dearborn_CV_Jan_2026.pdf)  
+
+If you are hiring for roles in computational genomics or ML for biology, I would love to connect.
 
 ---
 
