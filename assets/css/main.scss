@@ -1,50 +1,71 @@
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main lib
+---
+# Custom CSS for Jake Dearborn Portfolio
+---
 
-/* Custom Overrides for a Professional Portfolio Look */
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
 
-/* 1. Reduce base font size (Minimal Mistakes default is quite large) */
+/* Fix: Reduce default font size for a more professional technical feel */
 html {
-  font-size: 16px; /* Default was often 18px-20px */
+  font-size: 16px; 
 }
 
 body {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-/* 2. Increase the maximum width of the content container */
+/* Fix: Expand maximum width of the content area without breaking the sidebar.
+   We target the layout wrappers used by Minimal Mistakes.
+*/
+#main {
+  max-width: 1280px; /* Overall site container width */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/* Ensure the content column takes up the remaining space on large screens */
 .archive, .page {
   width: 100%;
-  max-width: 1200px; /* Increased from ~800px */
 }
 
-/* 3. Adjust the sidebar width so it doesn't take up too much room on wide screens */
+/* Sidebar width adjustment to prevent conflict on medium-large screens */
 @media (min-width: 64em) {
   .sidebar {
-    width: 250px;
+    width: 25%; /* Responsive width for sidebar */
+    max-width: 300px;
+    float: left;
+  }
+
+  .archive, .page {
+    float: right;
+    width: calc(100% - 320px); /* Leave room for the sidebar and its margin */
+    padding-right: 0;
   }
 }
 
-/* 4. Tweak headers to be slightly more compact */
+/* Adjust the 'wide' class to ensure it fills the expanded container */
+.wide {
+  max-width: 100% !important;
+}
+
+/* Header refinements for a cleaner look */
 .page__title {
-  font-size: 2rem !important;
   margin-top: 0.5em !important;
-  margin-bottom: 0.5em !important;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.2em;
+  font-size: 2.2rem !important;
 }
 
 h2 {
-  font-size: 1.5rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #f2f2f2;
   padding-bottom: 0.3em;
-  margin-top: 1.5em;
+  margin-top: 2em;
 }
 
-h3 {
-  font-size: 1.25rem;
-}
-
-/* 5. Make the "wide" class even more expansive */
-.wide {
-  max-width: 1300px !important;
+/* Ensure links in technical lists aren't too crowded */
+li {
+  margin-bottom: 0.25em;
 }
