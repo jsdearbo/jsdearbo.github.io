@@ -1,7 +1,3 @@
----
-title: Research
-layout: page
----
 
 My research integrates **RNA biology, regulatory genomics, and deep learning** to understand how genomic sequence encodes splicing regulation and how these regulatory programs differ across immune cell types.
 
