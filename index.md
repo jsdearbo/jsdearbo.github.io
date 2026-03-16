@@ -94,7 +94,7 @@ My dissertation, **“Programmed Delayed Splicing and Immune Cell Type–Specifi
 - [Projects](./projects.md)  
 - [Machine Learning Work](./ml.md)  
 - [Publications](./publications.md)  
-- [Download my CV](/Dearborn_CV_Jan_2026.pdf)  
+- [Download my CV](/Dearborn_CV_March_2026.pdf)  
 
 If you are hiring for roles in computational genomics or ML for biology, I would love to connect.
 
