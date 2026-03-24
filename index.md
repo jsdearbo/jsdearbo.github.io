@@ -6,11 +6,27 @@ author_profile: true
 ---
 
 # Jake Dearborn, PhD Candidate (Defending 2026)
-**Computational Genomics · Machine Learning · RNA Biology**
+**Machine Learning · Regulatory Genomics · Biological Data Systems**
 
-I am a late-stage PhD candidate in **Molecular Biology** at the **University of Vermont (Larner College of Medicine)** working at the intersection of **regulatory genomics, RNA biology, and deep learning**. I build sequence-to-function models and large-scale RNA-seq analysis systems to decode **cell-type–specific alternative splicing programs** and **splicing kinetics** in immune cells.
+I am a PhD candidate in **Molecular Biology** at the **University of Vermont** working at the intersection of **regulatory genomics, RNA biology, and machine learning**.
 
-I am actively exploring **industry roles in computational genomics, ML for biology, and regulatory sequence modeling** starting in 2026.
+I develop **sequence-to-function models** and build **data pipelines for large-scale RNA-seq and single-cell datasets** to study cell-type–specific gene regulation and splicing.
+
+---
+
+## Selected Work
+
+**Sequence-to-Function Modeling (Borzoi Fine-tuning)**  
+Developed and fine-tuned deep learning models to predict RNA splicing and regulatory activity from genomic sequence.
+
+**RNA-seq Splicing Pipeline**  
+Built end-to-end pipeline integrating STAR, StringTie, and rMATS to generate consistent PSI estimates and training features from heterogeneous datasets.
+
+**Single-cell Multi-omics Analysis**  
+Designed workflows for Drop-seq, 10x, and CITE-seq data including QC, normalization, clustering, and differential analysis.
+
+**Model Interpretation & Motif Discovery**  
+Applied attribution methods and TF-MoDISco to identify regulatory motifs from trained models.
 
 ---
 
