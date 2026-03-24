@@ -52,6 +52,9 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
       url: "https://www.linkedin.com/in/jake-dearborn-15408652/"
+    - label: "ORCID"
+      icon: "fab fa-orcid"
+      url: "https://orcid.org/0000-0001-8894-1574"
 
 # Footer links
 footer:
@@ -65,6 +68,9 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
       url: "https://www.linkedin.com/in/jake-dearborn-15408652/"
+    - label: "ORCID"
+      icon: "fab fa-orcid"
+      url: "https://orcid.org/0000-0001-8894-1574"
 
 
 # Defaults for pages
