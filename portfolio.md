@@ -22,7 +22,7 @@ An end-to-end Python pipeline to quantify intron excision dynamics from kinetic 
 **How It Works**
 - STAR alignment of kinetic RNA-seq time series
 - Custom interval engineering for intron-level quantification
-- Novel **Completed Splicing Index (CoSI)** to quantify splicing completion per intron and timepoint
+- Adapted **Completed Splicing Index (CoSI)** to quantify splicing completion per intron and timepoint
 - Python-based aggregation, normalization, and visualization across replicates and conditions
 - Fine-tuning of a genomic foundation model to prioritize candidate regulatory sequence features associated with delayed splicing
 
