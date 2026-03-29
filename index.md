@@ -114,11 +114,10 @@ My first-author manuscript on **programmed splice delays in macrophage immune ge
 
 ## Navigation
 
-- [Research](./research.md)  
-- [Projects](./projects.md)  
-- [Machine Learning Work](./ml.md)  
-- [Publications](./publications.md)  
-- [Download my CV](/Dearborn_CV_March_2026.pdf)  
+- [Portfolio](./portfolio.md) — case studies linking biological questions to computational systems
+- [Engineering & ML](./ml.md) — model architecture, training infrastructure, and code
+- [Publications](./publications.md)
+- [Download my CV](/Dearborn_CV_March_2026.pdf)
 
 If you are hiring for roles in computational genomics or ML for biology, I would love to connect.
 
