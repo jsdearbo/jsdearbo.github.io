@@ -5,107 +5,96 @@ permalink: /portfolio/
 author_profile: true
 ---
 
-Selected case studies linking the biological question to the computational system built to answer it. Each project is driven by a real scientific problem and designed for reproducibility and scale.
+Selected case studies linking the biological question to the computational system built to answer it. Each project is driven by a real scientific problem and designed for reproducibility, interpretability, and scale.
 
 ---
 
 ## Case Study 1: Programmed Splicing Kinetics in the Inflammatory Response
 
-**The Biological Question**
-Do splicing delays in NF-κB–responsive genes reflect a programmed regulatory mechanism, or are they stochastic noise? Answering this required moving from descriptive catalogs of splicing events to a quantitative, kinetic framework operating at intron resolution.
+**The Biological Question**  
+Do splicing delays in NF-κB–responsive genes reflect a programmed regulatory mechanism, or are they stochastic noise? Answering this required moving from descriptive catalogs of splicing events to a quantitative kinetic framework operating at intron resolution.
 
 > *[Graphical abstract / workflow diagram — coming soon]*
 
-**What I Built**
-End-to-end Python pipeline to quantify intron excision dynamics from kinetic RNA-seq data across the NF-κB–responsive transcriptome.
+**What I Built**  
+An end-to-end Python pipeline to quantify intron excision dynamics from kinetic RNA-seq data across the NF-κB–responsive transcriptome.
 
 **How It Works**
 - STAR alignment of kinetic RNA-seq time series
-- Custom intron/exon annotation generation (StringTie + rMATS)
-- Genome interval engineering for intron-level metrics
-- Novel **Completed Splicing Index (CoSI)** to quantify splicing completion per intron per timepoint
-- Python-based aggregation and visualization across replicates and conditions
+- Custom interval engineering for intron-level quantification
+- Novel **Completed Splicing Index (CoSI)** to quantify splicing completion per intron and timepoint
+- Python-based aggregation, normalization, and visualization across replicates and conditions
+- Fine-tuning of a genomic foundation model to prioritize candidate regulatory sequence features associated with delayed splicing
 
-**The Engineering Challenge**
-Intron-level kinetics require precise interval handling, isoform disambiguation, and robust normalization across timepoints — standard RNA-seq tools are not designed for this resolution.
+**The Engineering Challenge**  
+Extracting accurate intron-level kinetics requires precise interval handling, isoform-aware quantification, and robust normalization across temporal datasets at a resolution standard RNA-seq workflows are not designed to support out of the box.
 
-**Outcome**
-Identified a class of reproducibly delayed "bottleneck introns" contributing to temporal regulation of inflammation. First-author manuscript currently **in review at *eLife***.
+**Outcome**  
+Identified a class of "bottleneck introns" that delay inflammatory gene expression. Minigene assays experimentally validated that weak 5' splice donors drive this delay in a subset of targets, while model interpretation highlighted additional putative non-canonical regulatory motifs for future follow-up. *(First-author manuscript currently in review at eLife.)*
 
 > *[Annotated notebook — coming soon]*
 
 ---
 
-## Case Study 2: Decoding Immune Cell Type–Specific Splicing Programs
+## Case Study 2: Decoding Immune Cell Type–Specific Splicing with Foundation Models
 
-**The Biological Question**
-How do B cells, T cells, and macrophages deploy distinct splicing programs from the same genome? Answering this required building cell-type–resolved labels at scale for supervised deep learning.
+**The Biological Question**  
+How do B cells, T cells, and macrophages deploy distinct splicing programs from the same genome? Answering this required building cell-type–resolved training labels at scale, adapting a genomic foundation model for splicing prediction, and interpreting the learned sequence features underlying lineage-specific regulation.
 
 > *[Graphical abstract / workflow diagram — coming soon]*
 
-**What I Built**
-A labeling pipeline generating exon inclusion and intron retention labels across immune cell types, paired with a deep learning framework for cell-type–aware splicing prediction.
+**What I Built**  
+A unified data engineering, modeling, and interpretation framework for immune cell type–specific splicing prediction.
 
 **How It Works**
-- Cell-type–specific GTF construction (StringTie) using dominant isoform selection by TPM
-- PSI extraction (rMATS) and intron retention quantification per cell type
-- Automated labeling of exons, introns, and intergenic regions
-- YAML-driven configuration for reproducible re-execution
-- Deep learning–based modeling of exon inclusion and intron retention
-- Discovery of **cis-regulatory motifs** enriched in lineage-specific splicing events
+- Cell-type–specific GTF construction with StringTie using dominant isoform selection by TPM
+- PSI extraction from rMATS and integration of exon inclusion / intron retention labels into genome-scale training targets
+- Automated labeling of exons, introns, and intergenic regions with reproducible YAML-driven configuration
+- Fine-tuning of Borzoi for splicing prediction using both single-task and multitask training strategies
+- PyTorch Lightning–based training workflows with mixed precision, checkpointing, and HPC execution
+- Attribution-based interpretation with DeepSHAP / TF-MoDISco to identify **cis-regulatory motifs** associated with lineage-specific splicing behavior
+- In silico perturbation analyses to test the functional importance of discovered sequence elements
 
-**The Engineering Challenge**
-Reconciling alternative isoforms, splicing events, and genomic coordinates across multiple cell types without label leakage or coordinate drift.
+**The Engineering Challenge**  
+This project required solving two tightly linked problems at once: generating high-confidence labels across multiple immune cell types without coordinate drift or label leakage, and adapting a large genomic foundation model to a splicing-specific prediction task without losing interpretability.
 
-**Outcome**
-Produced clean, high-confidence training labels across immune lineages. Manuscript in preparation (2026).
+**Outcome**  
+Produced a scalable training dataset and modeling framework for immune cell type–specific splicing, improved predictive performance over simpler baselines, and recovered interpretable candidate regulatory motifs associated with exon inclusion and intron retention across lineages. *(Manuscript in preparation.)*
 
 > *[Annotated notebook — coming soon]*
 
 ---
 
-## Case Study 3: Foundation Model Fine-Tuning for Splicing Prediction
+## Technical Systems: Splicing Data Infrastructure & HPC Orchestration
 
-**The Biological Question**
-Can large genomic foundation models be adapted to predict cell-type–specific splicing behavior, and can their learned representations be interrogated for mechanistic regulatory insight?
-
-> *[Graphical abstract / workflow diagram — coming soon]*
-
-**What I Built**
-A fine-tuning and interpretation framework adapting Borzoi for splicing prediction and regulatory motif discovery.
-
-**How It Works**
-- Custom PyTorch Lightning wrappers around Borzoi
-- LoRA / PEFT fine-tuning for task-specific adaptation
-- Mixed-precision training on HPC GPUs with robust checkpoint loading
-- Captum / DeepSHAP attribution integration
-- TF-MoDISco motif extraction from attribution maps
-- In silico mutagenesis to test the causal roles of discovered regulatory elements
-
-**The Engineering Challenge**
-Foundation models are large, memory-intensive, and not designed for splicing-specific tasks. Adapting them requires careful sequence slicing, multi-GPU coordination, and attribution pipelines that scale to genome-wide prediction.
-
-**Outcome**
-Improved task performance over baseline and extracted interpretable regulatory motifs controlling exon inclusion and intron retention across immune cell types.
-
-> *[Annotated notebook — coming soon]*
-
----
-
-## Infrastructure: Splicing Data Systems & HPC Orchestration
-
-**What it does**
-Provides reproducible, scalable execution of all splicing analysis and modeling workflows across projects.
+**What it does**  
+Provides the reproducible computational backbone supporting large-scale splicing analysis and model training across projects.
 
 **How it's built**
-- SLURM job orchestration with multi-GPU and CPU fallback strategies
+- SLURM-based orchestration with multi-GPU and CPU fallback strategies
 - Conda environment isolation per project
-- YAML/JSON-driven pipeline configuration
-- BigWig-based data handling (PyBigWig)
+- YAML/JSON-driven configuration for reproducible pipeline execution
+- BigWig-based data handling and custom Python utilities for genomic interval processing
+- Checkpointed model training and restartable analysis workflows for long-running jobs
 
-**Why it matters**
-Genomics workflows are I/O-heavy, brittle, and hard to reproduce across environments. Treating infrastructure as a first-class concern keeps results auditable and shareable across collaborators.
+**Why it matters**  
+Genomics workflows are computationally heavy, I/O-bound, and often difficult to reproduce across environments. Treating infrastructure as a first-class part of the work makes the biological conclusions more auditable, portable, and scalable.
 
 ---
 
-*Graphical abstracts and annotated notebooks are being added. [Reach out](mailto:jakedearborn@gmail.com) if you'd like a walkthrough of any system in the meantime.*
+<!-- ## Additional Project: Protein Language Model Embeddings for Sequence Interpretation
+
+**The Question**  
+Can pretrained protein language model embeddings reveal biologically meaningful structure in sequence datasets before supervised modeling?
+
+**What I Built**  
+An exploratory analysis workflow using ESM embeddings and UMAP projection to visualize latent structure in protein sequence space.
+
+**Why it's here**  
+This project is less developed than the case studies above, but it reflects a complementary strength: using representation learning not just for prediction, but for interpretation, data QC, and hypothesis generation.
+
+> *[Notebook / write-up — coming soon]*
+
+--- -->
+
+*Graphical abstracts and annotated notebooks are being added. [Reach out](mailto:jakedearborn@gmail.com) if you'd like a walkthrough of any of these systems in the meantime.*
