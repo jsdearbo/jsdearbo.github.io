@@ -5,8 +5,6 @@ permalink: /projects/
 author_profile: true
 ---
 
-# Projects
-
 Below are selected **technical systems and modeling frameworks** I have developed for splicing analysis and deep learning in regulatory genomics.
 
 > **Industry relevance:** These projects emphasize reproducible pipelines, scalable model training, and interpretable outputs that support decision-making in genomics R&D environments.
