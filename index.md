@@ -5,12 +5,12 @@ permalink: /
 author_profile: true
 ---
 
-# Jake Dearborn, PhD Candidate (Defending 2026)
+# Jake Dearborn, PhD Candidate (Defending June 2026)
 **Machine Learning · Regulatory Genomics · Biological Data Systems**
 
 I am a PhD candidate in **Molecular Biology** at the **University of Vermont** working at the intersection of **regulatory genomics, RNA biology, and machine learning**.
 
-I develop **sequence-to-function models** and build **data pipelines for large-scale RNA-seq and single-cell datasets** to study cell-type–specific gene regulation and splicing.
+I develop **sequence-to-function models** and build **data pipelines for large-scale RNA-seq and single-cell datasets** to study cell-type–specific gene regulation and splicing, with a primary focus on **T cells, B cells, and macrophages**.
 
 ---
 
@@ -22,11 +22,17 @@ Developed and fine-tuned deep learning models to predict RNA splicing and regula
 **RNA-seq Splicing Pipeline**  
 Built end-to-end pipeline integrating STAR, StringTie, and rMATS to generate consistent PSI estimates and training features from heterogeneous datasets.
 
-**Single-cell Multi-omics Analysis**  
-Designed workflows for Drop-seq, 10x, and CITE-seq data including QC, normalization, clustering, and differential analysis.
+**Single-cell Multi-omics Analysis**
+Designed workflows for Drop-seq, 10x, and CITE-seq data including QC, normalization, clustering, and differential analysis. Includes hands-on bench experience establishing Drop-seq and Pip-seq capture workflows in the lab.
 
-**Model Interpretation & Motif Discovery**  
+**Model Interpretation & Motif Discovery**
 Applied attribution methods and TF-MoDISco to identify regulatory motifs from trained models.
+
+**Cross-functional Collaborative Analysis**
+RNA-seq and scRNA-seq analytical contributions to published research in *Cell Reports* (2025) and *ACS Nano* (2024), demonstrating a consistent track record of partnering across experimental teams.
+
+**Keystone AI in Molecular Biology — Poster Presentation**
+Presented research at the Keystone Symposia conference on AI in Molecular Biology, engaging directly with the computational biology and biotech community.
 
 ---
 
@@ -91,7 +97,9 @@ Target roles include **Computational Biologist, Machine Learning Scientist (Geno
 
 ## Current Work
 
-My dissertation, **“Programmed Delayed Splicing and Immune Cell Type–Specific Alternative Splicing,”** integrates experimental RNA biology with modern deep learning to identify regulatory elements controlling splicing kinetics and cell-type specificity.
+My dissertation, **”Programmed Delayed Splicing and Immune Cell Type–Specific Alternative Splicing,”** integrates experimental RNA biology with modern deep learning to identify regulatory elements controlling splicing kinetics and cell-type specificity.
+
+My first-author manuscript on **programmed splice delays in macrophage immune genes** is currently **in review at eLife**.
 
 ---
 
