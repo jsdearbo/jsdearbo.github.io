@@ -5,8 +5,6 @@ permalink: /ml/
 author_profile: true
 ---
 
-# Machine Learning Work
-
 This page highlights the machine learning side of my research for teams hiring ML talent in genomics and computational biology.
 
 ---
