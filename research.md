@@ -64,7 +64,7 @@ Across projects, I apply:
 
 - **DeepLIFT / DeepSHAP / Captum** for feature attribution  
 - **TF-MoDISco** for motif discovery  
-- MEME, FIMO, and tangermeme for motif scanning and validation  
+- **SEA** and **FIMO** (from [The MEME Suite](https://meme-suite.org/meme/))  motif scanning and validation  
 
 These approaches are used to identify candidate **RNA-binding protein motifs** and novel intronic regulatory elements controlling splicing kinetics and exon choice.
 
