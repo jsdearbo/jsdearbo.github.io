@@ -1,0 +1,43 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: ai_studio/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ai_studio
+        run: npm ci
+
+      - name: Stage public assets
+        run: |
+          mkdir -p ai_studio/public/assets/images
+          cp assets/images/headshot.jpg ai_studio/public/assets/images/headshot.jpg
+          cp Dearborn_CV_March_2026.pdf ai_studio/public/Dearborn_CV_March_2026.pdf
+
+      - name: Build
+        working-directory: ai_studio
+        run: npm run build
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ai_studio/dist

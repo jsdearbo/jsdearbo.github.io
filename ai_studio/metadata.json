@@ -1,0 +1,7 @@
+{
+  "name": "Jake Dearborn Portfolio",
+  "description": "A high-end personal portfolio for a PhD Candidate in Computational Genomics and Machine Learning, showcasing research in splicing kinetics and deep learning.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
