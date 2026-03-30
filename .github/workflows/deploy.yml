@@ -19,12 +19,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: ai_studio/package-lock.json
 
       - name: Install dependencies
         working-directory: ai_studio
-        run: npm ci
+        run: npm install
 
       - name: Stage public assets
         run: |
