@@ -5,7 +5,7 @@ permalink: /portfolio/
 author_profile: true
 ---
 
-Selected case studies linking the biological question to the computational system built to answer it. Each project is driven by a real scientific problem and designed for reproducibility, interpretability, and scale.
+Selected case studies linking biological questions to the computational systems built to answer them. Each project is grounded in a concrete scientific problem and emphasizes reproducibility, interpretability, and analytical rigor.
 
 ---
 
@@ -24,13 +24,13 @@ An end-to-end Python pipeline to quantify intron excision dynamics from kinetic 
 - Custom interval engineering for intron-level quantification
 - Adapted **Completed Splicing Index (CoSI)** to quantify splicing completion per intron and timepoint
 - Python-based aggregation, normalization, and visualization across replicates and conditions
-- Fine-tuning of a genomic foundation model to prioritize candidate regulatory sequence features associated with delayed splicing
+- Follow-up sequence modeling to prioritize candidate regulatory features associated with delayed splicing
 
 **The Engineering Challenge**  
 Extracting accurate intron-level kinetics requires precise interval handling, isoform-aware quantification, and robust normalization across temporal datasets at a resolution standard RNA-seq workflows are not designed to support out of the box.
 
 **Outcome**  
-Identified a class of "bottleneck introns" that delay inflammatory gene expression. Minigene assays experimentally validated that weak 5' splice donors drive this delay in a subset of targets, while model interpretation highlighted additional putative non-canonical regulatory motifs for future follow-up. *(First-author manuscript currently in review at eLife.)*
+Identified a class of "bottleneck introns" that delay inflammatory gene expression. Minigene assays experimentally validated that weak 5' splice donors drive this delay in a subset of targets, while downstream model interpretation highlighted additional putative non-canonical regulatory motifs for future follow-up. *(First-author manuscript currently in review at eLife.)*
 
 > *[Annotated notebook — coming soon]*
 
@@ -51,7 +51,6 @@ A unified data engineering, modeling, and interpretation framework for immune ce
 - PSI extraction from rMATS and integration of exon inclusion / intron retention labels into genome-scale training targets
 - Automated labeling of exons, introns, and intergenic regions with reproducible YAML-driven configuration
 - Fine-tuning of Borzoi for splicing prediction using both single-task and multitask training strategies
-- PyTorch Lightning–based training workflows with mixed precision, checkpointing, and HPC execution
 - Attribution-based interpretation with DeepSHAP / TF-MoDISco to identify **cis-regulatory motifs** associated with lineage-specific splicing behavior
 - In silico perturbation analyses to test the functional importance of discovered sequence elements
 
@@ -65,17 +64,17 @@ Produced a scalable training dataset and modeling framework for immune cell type
 
 ---
 
-## Technical Systems: Splicing Data Infrastructure & HPC Orchestration
+## Supporting Systems: Reproducible Splicing Data Infrastructure
 
 **What it does**  
-Provides the reproducible computational backbone supporting large-scale splicing analysis and model training across projects.
+Provides the computational backbone supporting large-scale splicing analysis and model training across projects.
 
 **How it's built**
 - SLURM-based orchestration with multi-GPU and CPU fallback strategies
 - Conda environment isolation per project
 - YAML/JSON-driven configuration for reproducible pipeline execution
 - BigWig-based data handling and custom Python utilities for genomic interval processing
-- Checkpointed model training and restartable analysis workflows for long-running jobs
+- Checkpointed training and restartable analysis workflows for long-running jobs
 
 **Why it matters**  
 Genomics workflows are computationally heavy, I/O-bound, and often difficult to reproduce across environments. Treating infrastructure as a first-class part of the work makes the biological conclusions more auditable, portable, and scalable.

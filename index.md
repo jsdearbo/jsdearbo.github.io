@@ -6,26 +6,26 @@ author_profile: true
 ---
 
 # Jake Dearborn, PhD Candidate (Defending June 2026)
-**Machine Learning · Regulatory Genomics · RNA Biology**
+**Computational Biology · Regulatory Genomics · Machine Learning**
 
-I am a PhD candidate in **Molecular Biology** at the **University of Vermont** working at the intersection of **regulatory genomics, RNA biology, and machine learning**.
+I am a PhD candidate in **Molecular Biology** at the **University of Vermont** working at the intersection of **RNA biology, regulatory genomics, and machine learning**.
 
-My work focuses on building **sequence-to-function models** and **computational pipelines for RNA-seq and single-cell genomics** to study alternative splicing, gene regulation, and regulatory sequence function, with a primary focus on **immune cell systems** including **T cells, B cells, and macrophages**.
+My work centers on building **sequence-to-function models** and **computational pipelines for RNA-seq and single-cell genomics** to study alternative splicing, regulatory sequence function, and immune cell type–specific gene regulation.
 
 I am primarily targeting roles in **computational biology, machine learning for genomics, bioinformatics, and scientific software for biology**.
 
 ---
 
-## Selected Work
+## What I Work On
 
-**Sequence-to-Function Modeling for Splicing**  
-Developing and fine-tuning deep learning models, including genomic foundation models, to predict splicing behavior and regulatory activity from sequence.
+**Sequence-to-Function Modeling**  
+Developing and fine-tuning deep learning models, including genomic foundation models, to predict splicing behavior and regulatory activity directly from sequence.
 
 **RNA-seq Splicing Data Systems**  
 Building end-to-end pipelines integrating STAR, StringTie, and rMATS to generate reproducible splicing labels, PSI estimates, and training-ready features from heterogeneous datasets.
 
 **Single-cell and Multi-omic Analysis**  
-Designing analysis workflows for Drop-seq, 10x, and CITE-seq data, including QC, normalization, clustering, and differential analysis, informed by direct hands-on experience with experimental workflows.
+Designing analysis workflows for Drop-seq, 10x, and CITE-seq data, including QC, normalization, clustering, and differential analysis, informed by direct hands-on familiarity with experimental workflows.
 
 **Model Interpretation and Motif Discovery**  
 Using attribution methods, TF-MoDISco, and downstream motif analysis to connect model predictions back to testable regulatory hypotheses.
@@ -36,13 +36,13 @@ Using attribution methods, TF-MoDISco, and downstream motif analysis to connect 
 
 My dissertation, **“Programmed Delayed Splicing and Immune Cell Type–Specific Alternative Splicing,”** integrates experimental RNA biology with deep learning to identify regulatory elements controlling splicing kinetics and cell-type specificity.
 
-My first-author manuscript on **programmed splice delays in inflammatory gene regulation** is currently **in review at eLife**.
+My first-author manuscript on **programmed delayed splicing in inflammatory gene regulation** is currently **in review at eLife**.
 
 Recent published collaborative work includes contributions to *Cell Reports* (2025) and *ACS Nano* (2024).
 
 ---
 
-## Technical Focus
+## Technical Areas
 
 **Machine Learning**
 - PyTorch, PyTorch Lightning
