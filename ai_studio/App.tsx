@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Navigation from './components/Navigation';
 import { PROJECTS, PUBLICATIONS, RESEARCH_AREAS, PORTFOLIO_CASES, PRESENTATIONS } from './constants';
-import { Github, Linkedin, Mail, FileText, ExternalLink, Code2, Beaker, Cpu, Database } from 'lucide-react';
+import { Github, Linkedin, Mail, FileText, ExternalLink, Code2, Beaker, Cpu, Database, Maximize2 } from 'lucide-react';
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('Home');
@@ -299,6 +299,69 @@ const App: React.FC = () => {
     </section>
   );
 
+  const renderDemos = () => (
+    <section className="space-y-12 animate-in slide-in-from-bottom-10 duration-700">
+      <div className="max-w-3xl">
+        <h2 className="text-3xl font-bold mb-4">Interactive Demos</h2>
+        <p className="text-gray-400 leading-relaxed">
+          Live, browser-based tools built from published analyses. Data are embedded directly — no server required.
+        </p>
+      </div>
+
+      <div className="glass p-8 rounded-3xl space-y-6">
+        <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+          <div className="space-y-2">
+            <div className="flex items-center gap-3">
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider bg-green-500/20 text-green-400">
+                Published
+              </span>
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider bg-blue-500/20 text-blue-400">
+                R · Shiny · fgsea · DESeq2
+              </span>
+            </div>
+            <h3 className="text-2xl font-bold">
+              gWAT Transcriptomics — <em>Kras</em><sup>G12D/+</sup> Mice
+            </h3>
+            <p className="text-gray-400 leading-relaxed max-w-2xl">
+              Interactive volcano plots and hallmark pathway enrichment (GSEA) for perigonadal white
+              adipose tissue at 3 and 6 weeks post-induction. G12D vs. WT littermate controls.
+              From Supplemental Figure S9, <span className="italic">Cell Reports</span> (2025).
+            </p>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 pt-2">
+              {[
+                'Adjustable padj and |LFC| thresholds',
+                'Hover tooltips with gene name and statistics',
+                'Reactive DEG count summary table',
+                'fgsea bubble plot — NES, leading-edge size',
+              ].map((feat, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-gray-500">
+                  <span className="text-blue-500 mt-1">▹</span>{feat}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <a
+            href="/shiny/gwat_rnaseq/"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 shrink-0 text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors"
+          >
+            Open full screen <Maximize2 size={14} />
+          </a>
+        </div>
+
+        <div className="rounded-2xl overflow-hidden border border-white/10" style={{ height: '780px' }}>
+          <iframe
+            src="/shiny/gwat_rnaseq/"
+            title="gWAT RNA-seq Explorer"
+            className="w-full h-full"
+            style={{ border: 'none' }}
+          />
+        </div>
+      </div>
+    </section>
+  );
+
   const renderPublications = () => (
     <section className="space-y-12 animate-in slide-in-from-bottom-10 duration-700">
       <div className="max-w-3xl">
@@ -370,6 +433,7 @@ const App: React.FC = () => {
         {activeSection === 'Projects' && renderProjects()}
         {activeSection === 'Engineering' && renderEngineering()}
         {activeSection === 'Publications' && renderPublications()}
+        {activeSection === 'Demos' && renderDemos()}
       </main>
 
       <footer className="relative z-10 max-w-6xl mx-auto px-6 py-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between text-gray-500 text-sm gap-4">
