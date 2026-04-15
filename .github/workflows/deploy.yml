@@ -31,7 +31,8 @@ jobs:
         run: |
           Rscript -e "
             options(repos = c(CRAN = 'https://cloud.r-project.org'))
-            install.packages(c('renv', 'rsconnect'), repos = 'https://cloud.r-project.org')
+            install.packages(c('renv', 'rsconnect', 'shiny', 'plotly', 'dplyr', 'stringr'),
+                             repos = 'https://cloud.r-project.org', Ncpus = 2)
             rsconnect::setAccountInfo(
               name   = Sys.getenv('SHINYAPPS_NAME'),
               token  = Sys.getenv('SHINYAPPS_TOKEN'),
