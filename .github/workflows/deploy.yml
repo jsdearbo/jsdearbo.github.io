@@ -27,8 +27,8 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: r-pkgs-rsconnect-${{ hashFiles('shiny_apps/gwat_portfolio/app.R') }}
-          restore-keys: r-pkgs-rsconnect-
+          key: r-pkgs-v3-${{ hashFiles('shiny_apps/gwat_portfolio/app.R') }}
+          restore-keys: r-pkgs-v3-
 
       - name: Deploy to shinyapps.io
         env:
@@ -38,8 +38,10 @@ jobs:
         run: |
           Rscript -e "
             options(repos = c(CRAN = 'https://cloud.r-project.org'))
-            install.packages(c('rsconnect', 'shiny', 'plotly', 'dplyr', 'stringr'),
+            install.packages(c('renv', 'rsconnect', 'shiny', 'plotly', 'dplyr', 'stringr'),
                              repos = 'https://cloud.r-project.org', Ncpus = 2)
+            renv::init(project = 'shiny_apps/gwat_portfolio', bare = TRUE, restart = FALSE)
+            renv::snapshot(project = 'shiny_apps/gwat_portfolio', type = 'implicit', prompt = FALSE)
             rsconnect::setAccountInfo(
               name   = Sys.getenv('SHINYAPPS_NAME'),
               token  = Sys.getenv('SHINYAPPS_TOKEN'),
