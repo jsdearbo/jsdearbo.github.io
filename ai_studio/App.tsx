@@ -304,7 +304,7 @@ const App: React.FC = () => {
       <div className="max-w-3xl">
         <h2 className="text-3xl font-bold mb-4">Interactive Demos</h2>
         <p className="text-gray-400 leading-relaxed">
-          Live, browser-based tools built from published analyses. Data are embedded directly — no server required.
+          Live, interactive tools built from published analyses. Hosted on shinyapps.io and embedded directly in the page.
         </p>
       </div>
 
@@ -341,7 +341,7 @@ const App: React.FC = () => {
             </ul>
           </div>
           <a
-            href="/shiny/gwat_rnaseq/"
+            href="https://jsdearbo.shinyapps.io/gwat_rnaseq/"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-2 shrink-0 text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors"
@@ -352,7 +352,7 @@ const App: React.FC = () => {
 
         <div className="rounded-2xl overflow-hidden border border-white/10" style={{ height: '780px' }}>
           <iframe
-            src="/shiny/gwat_rnaseq/"
+            src="https://jsdearbo.shinyapps.io/gwat_rnaseq/"
             title="gWAT RNA-seq Explorer"
             className="w-full h-full"
             style={{ border: 'none' }}

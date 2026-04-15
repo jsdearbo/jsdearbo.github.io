@@ -20,25 +20,34 @@ jobs:
         with:
           r-version: '4.4'
 
-      - name: Install system dependencies for R packages
-        run: sudo apt-get install -y libarchive-dev libcurl4-openssl-dev libssl-dev libxml2-dev
-
       - name: Cache R packages
         uses: actions/cache@v4
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: r-pkgs-${{ hashFiles('shiny_apps/gwat_portfolio/app.R') }}
-          restore-keys: r-pkgs-
+          key: r-pkgs-rsconnect-${{ hashFiles('shiny_apps/gwat_portfolio/app.R') }}
+          restore-keys: r-pkgs-rsconnect-
 
-      - name: Install R packages
+      - name: Deploy to shinyapps.io
+        env:
+          SHINYAPPS_NAME: ${{ secrets.SHINYAPPS_NAME }}
+          SHINYAPPS_TOKEN: ${{ secrets.SHINYAPPS_TOKEN }}
+          SHINYAPPS_SECRET: ${{ secrets.SHINYAPPS_SECRET }}
         run: |
-          Rscript -e "install.packages(c('shinylive', 'shiny', 'plotly', 'dplyr', 'stringr'),
-                        repos = 'https://cloud.r-project.org', Ncpus = 2)"
-
-      - name: Export Shiny app with shinylive
-        run: |
-          mkdir -p ai_studio/public/shiny/gwat_rnaseq
-          Rscript -e "shinylive::export('shiny_apps/gwat_portfolio', 'ai_studio/public/shiny/gwat_rnaseq')"
+          Rscript -e "
+            install.packages(c('rsconnect', 'shiny', 'plotly', 'dplyr', 'stringr'),
+                             repos = 'https://cloud.r-project.org', Ncpus = 2)
+            rsconnect::setAccountInfo(
+              name   = Sys.getenv('SHINYAPPS_NAME'),
+              token  = Sys.getenv('SHINYAPPS_TOKEN'),
+              secret = Sys.getenv('SHINYAPPS_SECRET')
+            )
+            rsconnect::deployApp(
+              appDir      = 'shiny_apps/gwat_portfolio',
+              appName     = 'gwat_rnaseq',
+              forceUpdate = TRUE,
+              launch.browser = FALSE
+            )
+          "
 
       - name: Setup Node
         uses: actions/setup-node@v4
