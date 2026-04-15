@@ -23,17 +23,6 @@ jobs:
       - name: Install system dependencies for R packages
         run: sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev
 
-      - name: Build renv lockfile for shinyapps.io
-        run: |
-          Rscript -e "
-            app_dir <- normalizePath('shiny_apps/gwat_portfolio')
-            options(repos = c(CRAN = 'https://cloud.r-project.org'))
-            install.packages('renv', repos = 'https://cloud.r-project.org')
-            renv::init(project = app_dir, bare = TRUE, restart = FALSE)
-            renv::install(c('shiny', 'plotly', 'dplyr', 'stringr'), prompt = FALSE)
-            renv::snapshot(project = app_dir, type = 'implicit', prompt = FALSE)
-          "
-
       - name: Deploy to shinyapps.io
         env:
           SHINYAPPS_NAME: ${{ secrets.SHINYAPPS_NAME }}
@@ -42,7 +31,7 @@ jobs:
         run: |
           Rscript -e "
             options(repos = c(CRAN = 'https://cloud.r-project.org'))
-            install.packages('rsconnect', repos = 'https://cloud.r-project.org')
+            install.packages(c('renv', 'rsconnect'), repos = 'https://cloud.r-project.org')
             rsconnect::setAccountInfo(
               name   = Sys.getenv('SHINYAPPS_NAME'),
               token  = Sys.getenv('SHINYAPPS_TOKEN'),
