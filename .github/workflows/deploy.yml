@@ -37,6 +37,7 @@ jobs:
           SHINYAPPS_SECRET: ${{ secrets.SHINYAPPS_SECRET }}
         run: |
           Rscript -e "
+            options(repos = c(CRAN = 'https://cloud.r-project.org'))
             install.packages(c('rsconnect', 'shiny', 'plotly', 'dplyr', 'stringr'),
                              repos = 'https://cloud.r-project.org', Ncpus = 2)
             rsconnect::setAccountInfo(
