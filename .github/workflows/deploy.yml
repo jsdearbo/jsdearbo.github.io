@@ -33,6 +33,24 @@ jobs:
             options(repos = c(CRAN = 'https://cloud.r-project.org'))
             install.packages(c('rsconnect', 'shiny', 'plotly', 'dplyr', 'stringr'),
                              repos = 'https://cloud.r-project.org', Ncpus = 2)
+
+            # rsconnect hardcodes http://cran.rstudio.org in its source regardless of
+            # options(repos). Patch every function in the namespace that contains that URL.
+            ns <- asNamespace('rsconnect')
+            for (nm in ls(ns, all.names = TRUE)) {
+              obj <- tryCatch(get(nm, envir = ns, inherits = FALSE), error = function(e) NULL)
+              if (!is.function(obj)) next
+              b_lines <- tryCatch(deparse(body(obj)), error = function(e) character(0))
+              if (!any(grepl('cran.rstudio', b_lines, fixed = TRUE))) next
+              new_lines <- gsub('http://cran.rstudio.org',  'https://cloud.r-project.org', b_lines, fixed = TRUE)
+              new_lines <- gsub('https://cran.rstudio.com', 'https://cloud.r-project.org', new_lines, fixed = TRUE)
+              new_b <- tryCatch(parse(text = new_lines)[[1]], error = function(e) NULL)
+              if (is.null(new_b)) next
+              new_fn <- obj; body(new_fn) <- new_b; environment(new_fn) <- environment(obj)
+              tryCatch(assignInNamespace(nm, new_fn, ns = ns), error = function(e) NULL)
+              cat('Patched rsconnect::', nm, '\n')
+            }
+
             rsconnect::setAccountInfo(
               name   = Sys.getenv('SHINYAPPS_NAME'),
               token  = Sys.getenv('SHINYAPPS_TOKEN'),
