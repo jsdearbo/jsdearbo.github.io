@@ -23,6 +23,23 @@ jobs:
       - name: Install system dependencies for R packages
         run: sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev
 
+      - name: Build renv lockfile with correct CRAN mirror
+        run: |
+          Rscript -e "
+            app_dir <- normalizePath('shiny_apps/gwat_portfolio')
+            options(repos = c(CRAN = 'https://cloud.r-project.org'))
+            install.packages('renv', repos = 'https://cloud.r-project.org')
+            writeLines(c(
+              'Package: gwatrnaseq',
+              'Title: gWAT RNA-seq Explorer',
+              'Version: 1.0.0',
+              'Imports: shiny, plotly, dplyr, stringr'
+            ), file.path(app_dir, 'DESCRIPTION'))
+            renv::init(project = app_dir, bare = TRUE, restart = FALSE)
+            renv::install(c('shiny', 'plotly', 'dplyr', 'stringr'), prompt = FALSE)
+            renv::snapshot(project = app_dir, type = 'explicit', prompt = FALSE)
+          "
+
       - name: Deploy to shinyapps.io
         env:
           SHINYAPPS_NAME: ${{ secrets.SHINYAPPS_NAME }}
@@ -31,8 +48,7 @@ jobs:
         run: |
           Rscript -e "
             options(repos = c(CRAN = 'https://cloud.r-project.org'))
-            install.packages(c('renv', 'rsconnect', 'shiny', 'plotly', 'dplyr', 'stringr'),
-                             repos = 'https://cloud.r-project.org', Ncpus = 2)
+            install.packages('rsconnect', repos = 'https://cloud.r-project.org')
             rsconnect::setAccountInfo(
               name   = Sys.getenv('SHINYAPPS_NAME'),
               token  = Sys.getenv('SHINYAPPS_TOKEN'),
