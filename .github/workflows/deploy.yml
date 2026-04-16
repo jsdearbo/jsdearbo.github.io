@@ -57,6 +57,13 @@ jobs:
           cp assets/images/headshot.jpg ai_studio/public/assets/images/headshot.jpg
           cp Dearborn_CV_March_2026.pdf ai_studio/public/Dearborn_CV_March_2026.pdf
 
+      - name: Stage LNP analysis assets
+        run: |
+          mkdir -p ai_studio/public/assets/images/lnp
+          cp assets/images/lnp/*.png ai_studio/public/assets/images/lnp/
+          mkdir -p ai_studio/public/notebooks
+          cp assets/notebooks/lnp_10x.html ai_studio/public/notebooks/lnp_10x.html
+
       - name: Build
         working-directory: ai_studio
         run: npm run build

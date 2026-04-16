@@ -48,4 +48,6 @@ export interface PortfolioCase {
   signalsForML: string;
   signalsForBio: string;
   figurePlaceholderLabel: string;
+  figureImagePath?: string;
+  notebookPath?: string;
 }

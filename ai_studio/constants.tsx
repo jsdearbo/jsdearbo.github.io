@@ -151,6 +151,27 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     signalsForML: "Pathway-level summarization of high-dimensional transcriptomic data, statistical pipeline design, DESeq2 normalization and modeling.",
     signalsForBio: "Bulk RNA-seq end-to-end, differential expression, GSEA, adipose and cancer biology, published collaborative analysis.",
     figurePlaceholderLabel: "Figure: Volcano plot — gWAT DEGs at 3 and 6 weeks"
+  },
+  {
+    title: "Single-Cell Transcriptomics of the Intramuscular mRNA/LNP Immune Response",
+    problem: "mRNA/LNP vaccines drive adjuvancy through ionizable lipids, but which immune cell types in injected muscle are activated and what gene programs do they execute? Answering this at single-cell resolution required building a complete scRNA-seq pipeline from raw count matrices.",
+    data: "10x Chromium scRNA-seq of CD45+ immune cells from SM-102 eLNP- and PBS-injected mouse muscle (n=4/group, pooled into 2 samples; 5,511 LNP-treated + 1,189 PBS barcodes after QC). Hashtag demultiplexing via TotalSeq-A.",
+    whatIBuilt: "Full Seurat pipeline: multi-sample integration, SCTransform normalization with MT% regression, UMAP clustering, automated cell type annotation (scType) cross-validated against manual marker-based annotation, and differential expression across 9 immune populations.",
+    methodsStack: [
+      "R / Seurat — multi-sample integration, SCTransform, FindNeighbors, FindClusters",
+      "UMAP dimensionality reduction (30 PCs)",
+      "scType automated cell type scoring (immune system reference)",
+      "Manual annotation using canonical marker panels (Cx3cr1/Ccr2, S100a8/S100a9, Flt3/Xcr1)",
+      "FindAllMarkers — per-cluster differential expression across 9 cell types",
+      "Violin and split plots of ISGs, inflammasome, and cytokine genes across PBS vs. LNP conditions"
+    ],
+    result: "Identified 9 immune populations in injected muscle. Neutrophils and monocytes from SM-102-injected mice upregulate ISGs (Irf7, Isg15), inflammasome components (Nlrp3, Il1b), and cytokines (Tnf, Cxcl2) — published as Figure 3, Dowell et al., ACS Nano 2024 (doi:10.1021/acsnano.4c08490).",
+    whyItMatters: "Single-cell resolution revealed that myeloid infiltrates — not muscle tissue in bulk — are the source of the LNP-driven inflammatory program. This reframes how vaccine lipid adjuvancy works and provides a design principle distinguishing vaccine-grade (Class A) from therapeutic-grade (Class B) ionizable lipids.",
+    signalsForML: "Unsupervised clustering of high-dimensional count data, evaluation of automated cell type classification (scType) against manual ground truth, per-cluster differential ranking from FindAllMarkers — analogous to unsupervised representation learning with post-hoc class label assignment and feature attribution.",
+    signalsForBio: "Multi-sample hashtag demultiplexing, QC filtering (nFeature > 500, MT% < 10%), SCTransform normalization with confounder regression, marker-based cell type validation across monocytes, neutrophils, DCs, NK cells, B cells, T cells, pDCs, and RBCs.",
+    figurePlaceholderLabel: "UMAP — CD45+ immune infiltrates, PBS vs. SM-102 eLNP (manual annotation)",
+    figureImagePath: "/assets/images/lnp/umap_split.png",
+    notebookPath: "/notebooks/lnp_10x.html",
   }
 ];
 

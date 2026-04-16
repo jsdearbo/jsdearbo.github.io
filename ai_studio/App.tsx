@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Navigation from './components/Navigation';
 import { COMP_BIO_PROJECTS, ML_PROJECTS, PUBLICATIONS, RESEARCH_AREAS, PORTFOLIO_CASES, PRESENTATIONS, ML_EVIDENCE_SECTIONS } from './constants';
 import { PortfolioCase } from './types';
-import { Github, Linkedin, Mail, FileText, ExternalLink, Code2, Beaker, Cpu, Database, ArrowRight, BarChart2, FlaskConical } from 'lucide-react';
+import { Github, Linkedin, Mail, FileText, ExternalLink, Code2, Beaker, Cpu, Database, ArrowRight, BarChart2, FlaskConical, FileCode } from 'lucide-react';
 
 const accentBorderMap: Record<string, string> = {
   blue: 'border-l-blue-600',
@@ -215,7 +215,18 @@ const App: React.FC = () => {
           <div key={i} className="glass p-8 rounded-3xl border-l-4 border-l-purple-600 space-y-6">
             <h3 className="text-2xl font-bold">{c.title}</h3>
 
-            <FigurePlaceholderBlock label={c.figurePlaceholderLabel} />
+            <FigurePlaceholderBlock label={c.figurePlaceholderLabel} imagePath={c.figureImagePath} />
+
+            {c.notebookPath && (
+              <a
+                href={c.notebookPath}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition-colors"
+              >
+                <FileCode size={14} /> View Analysis Notebook <ExternalLink size={12} />
+              </a>
+            )}
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -389,8 +400,50 @@ const App: React.FC = () => {
         </div>
       </div>
 
-      {/* Shiny demo — secondary link */}
-      <div className="glass p-6 rounded-2xl border border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      {/* Published analyses — secondary links */}
+      <div className="space-y-4">
+        {/* ACS Nano scRNA-seq */}
+        <div className="glass p-6 rounded-2xl border border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div className="space-y-2">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider bg-green-500/20 text-green-400">
+                Published
+              </span>
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider bg-white/10 text-gray-400">
+                R · Seurat · scRNA-seq · 10x
+              </span>
+            </div>
+            <h4 className="font-semibold text-base">
+              Single-Cell Transcriptomics — Intramuscular LNP Immune Response
+            </h4>
+            <p className="text-sm text-gray-500 max-w-xl">
+              Identified 9 immune populations in injected muscle. Myeloid infiltrates drive ISG and
+              inflammasome programs in response to SM-102 eLNP. Figure 3,{' '}
+              <span className="italic">ACS Nano</span> (2024).
+            </p>
+          </div>
+          <div className="flex items-center gap-3 shrink-0">
+            <a
+              href="/notebooks/lnp_10x.html"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 glass px-4 py-2 rounded-lg text-sm font-medium text-blue-400 hover:text-blue-300 hover:border-blue-500/50 transition-all"
+            >
+              <FileCode size={14} /> View Notebook
+            </a>
+            <a
+              href="https://doi.org/10.1021/acsnano.4c08490"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 glass px-4 py-2 rounded-lg text-sm font-medium text-gray-400 hover:text-gray-300 hover:border-white/20 transition-all"
+            >
+              View Paper <ExternalLink size={14} />
+            </a>
+          </div>
+        </div>
+
+        {/* Shiny demo — secondary link */}
+        <div className="glass p-6 rounded-2xl border border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className="space-y-2">
           <div className="flex items-center gap-2 flex-wrap">
             <span className="text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider bg-green-500/20 text-green-400">
@@ -417,6 +470,7 @@ const App: React.FC = () => {
         >
           Open app <ExternalLink size={14} />
         </a>
+        </div>
       </div>
     </section>
   );
