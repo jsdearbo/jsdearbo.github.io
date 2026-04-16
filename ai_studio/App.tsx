@@ -215,7 +215,23 @@ const App: React.FC = () => {
           <div key={i} className="glass p-8 rounded-3xl border-l-4 border-l-purple-600 space-y-6">
             <h3 className="text-2xl font-bold">{c.title}</h3>
 
-            <FigurePlaceholderBlock label={c.figurePlaceholderLabel} imagePath={c.figureImagePath} />
+            {c.figureRightPaths ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <FigurePlaceholderBlock label={c.figurePlaceholderLabel} imagePath={c.figureImagePath} />
+                <div className="space-y-4">
+                  {c.figureRightPaths.map((path, idx) => (
+                    <div key={idx} className="rounded-2xl overflow-hidden border border-white/10">
+                      <img src={path} alt={c.figureRightLabels?.[idx] ?? `Figure ${idx + 2}`} className="w-full object-cover" />
+                      {c.figureRightLabels?.[idx] && (
+                        <div className="px-4 py-2 bg-white/[0.02] text-xs text-gray-500 italic">{c.figureRightLabels[idx]}</div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <FigurePlaceholderBlock label={c.figurePlaceholderLabel} imagePath={c.figureImagePath} />
+            )}
 
             {c.notebookPath && (
               <a

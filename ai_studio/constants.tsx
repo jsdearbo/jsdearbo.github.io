@@ -169,8 +169,16 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     whyItMatters: "Single-cell resolution revealed that myeloid infiltrates — not muscle tissue in bulk — are the source of the LNP-driven inflammatory program. This reframes how vaccine lipid adjuvancy works and provides a design principle distinguishing vaccine-grade (Class A) from therapeutic-grade (Class B) ionizable lipids.",
     signalsForML: "Unsupervised clustering of high-dimensional count data, evaluation of automated cell type classification (scType) against manual ground truth, per-cluster differential ranking from FindAllMarkers — analogous to unsupervised representation learning with post-hoc class label assignment and feature attribution.",
     signalsForBio: "Multi-sample hashtag demultiplexing, QC filtering (nFeature > 500, MT% < 10%), SCTransform normalization with confounder regression, marker-based cell type validation across monocytes, neutrophils, DCs, NK cells, B cells, T cells, pDCs, and RBCs.",
-    figurePlaceholderLabel: "UMAP — CD45+ immune infiltrates, PBS vs. SM-102 eLNP (manual annotation)",
-    figureImagePath: "/assets/images/lnp/umap_split.png",
+    figurePlaceholderLabel: "UMAP — CD45+ immune infiltrates (9 populations, manual annotation)",
+    figureImagePath: "/assets/images/lnp/umap_annotated.png",
+    figureRightPaths: [
+      "/assets/images/lnp/vln_nlrp3.png",
+      "/assets/images/lnp/vln_isg15.png",
+    ],
+    figureRightLabels: [
+      "Nlrp3 — inflammasome sensor (PBS vs. LNP, per cell type)",
+      "Isg15 — interferon-stimulated gene (PBS vs. LNP, per cell type)",
+    ],
     notebookPath: "/notebooks/lnp_10x.html",
   }
 ];

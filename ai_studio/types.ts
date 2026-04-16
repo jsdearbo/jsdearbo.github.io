@@ -49,5 +49,7 @@ export interface PortfolioCase {
   signalsForBio: string;
   figurePlaceholderLabel: string;
   figureImagePath?: string;
+  figureRightPaths?: string[];
+  figureRightLabels?: string[];
   notebookPath?: string;
 }
