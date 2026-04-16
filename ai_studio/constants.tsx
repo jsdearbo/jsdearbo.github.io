@@ -117,7 +117,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
   {
     title: "Decoding Immune Cell Type–Specific Splicing with Foundation Models",
     problem: "How do B cells, T cells, and macrophages deploy distinct splicing programs from the same genome, and can a sequence-to-function model learn those differences? Answering this required building cell-type–resolved training labels at scale and adapting a genomic foundation model for splicing prediction.",
-    data: "Bulk RNA-seq from 3 immune lineages; ~50,000 PSI and intron retention labels generated at genome scale; Borzoi model weights (pre-trained on 500bp–196kb sequence contexts).",
+    data: "Bulk RNA-seq from 3 immune lineages; ~50,000 PSI and intron retention labels generated at genome scale; Borzoi model weights (pre-trained on 524kb sequence contexts).",
     whatIBuilt: "A unified data engineering, modeling, and interpretation framework for immune cell type–specific splicing prediction.",
     methodsStack: [
       "Cell-type–specific GTF construction with StringTie using dominant isoform selection by TPM",
