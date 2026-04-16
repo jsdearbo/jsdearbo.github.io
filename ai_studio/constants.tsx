@@ -1,5 +1,5 @@
 
-import { Project, Publication, ResearchArea, PortfolioCase } from './types';
+import { Project, Publication, ResearchArea, PortfolioCase, MLEvidenceSection } from './types';
 
 export const RESEARCH_AREAS: ResearchArea[] = [
   {
@@ -98,32 +98,113 @@ export const PROJECTS: Project[] = [
 export const PORTFOLIO_CASES: PortfolioCase[] = [
   {
     title: "Programmed Splicing Kinetics in the Inflammatory Response",
-    biologicalQuestion: "Do splicing delays in NF-κB–responsive genes reflect a programmed regulatory mechanism, or are they stochastic noise? Answering this required moving from descriptive catalogs of splicing events to a quantitative kinetic framework operating at intron resolution.",
+    problem: "Do splicing delays in NF-κB–responsive genes reflect a programmed regulatory mechanism, or are they stochastic noise? Answering this required moving from descriptive catalogs of splicing events to a quantitative kinetic framework operating at intron resolution.",
+    data: "Kinetic RNA-seq time series from LPS-stimulated macrophages across 7 timepoints; ~12,000 annotated introns across the NF-κB–responsive transcriptome.",
     whatIBuilt: "An end-to-end Python pipeline to quantify intron excision dynamics from kinetic RNA-seq data across the NF-κB–responsive transcriptome.",
-    howItWorks: [
+    methodsStack: [
       "STAR alignment of kinetic RNA-seq time series",
       "Custom interval engineering for intron-level quantification",
       "Adapted Completed Splicing Index (CoSI) to quantify splicing completion per intron and timepoint",
       "Python-based aggregation, normalization, and visualization across replicates and conditions",
       "Follow-up sequence modeling to prioritize candidate regulatory features"
     ],
-    engineeringChallenge: "Extracting accurate intron-level kinetics requires precise interval handling, isoform-aware quantification, and robust normalization across temporal datasets at a resolution standard RNA-seq workflows are not designed to support out of the box.",
-    outcome: "Identified a class of 'bottleneck introns' that delay inflammatory gene expression. Minigene assays experimentally validated that weak 5' splice donors drive this delay in a subset of targets, while downstream model interpretation highlighted additional putative non-canonical regulatory motifs. First-author manuscript currently in review at eLife."
+    result: "Identified a class of 'bottleneck introns' that delay inflammatory gene expression. Minigene assays experimentally validated that weak 5' splice donors drive this delay. First-author manuscript in review at eLife.",
+    whyItMatters: "RNA processing rate is an underexplored axis of gene regulation; these delays shape the timing of the inflammatory response and may represent a target for therapeutic modulation.",
+    signalsForML: "Custom metric design (CoSI), sequence feature integration, quantitative kinetic modeling, foundation for downstream deep learning target generation.",
+    signalsForBio: "Kinetic splicing quantification at intron resolution, NF-κB transcriptome biology, integration of computational findings with minigene experimental validation.",
+    figurePlaceholderLabel: "Figure: CoSI kinetic profiles — bottleneck vs. non-bottleneck introns"
   },
   {
     title: "Decoding Immune Cell Type–Specific Splicing with Foundation Models",
-    biologicalQuestion: "How do B cells, T cells, and macrophages deploy distinct splicing programs from the same genome? Answering this required building cell-type–resolved training labels at scale, adapting a genomic foundation model for splicing prediction, and interpreting the learned sequence features underlying lineage-specific regulation.",
+    problem: "How do B cells, T cells, and macrophages deploy distinct splicing programs from the same genome, and can a sequence-to-function model learn those differences? Answering this required building cell-type–resolved training labels at scale and adapting a genomic foundation model for splicing prediction.",
+    data: "Bulk RNA-seq from 3 immune lineages; ~50,000 PSI and intron retention labels generated at genome scale; Borzoi model weights (pre-trained on 500bp–196kb sequence contexts).",
     whatIBuilt: "A unified data engineering, modeling, and interpretation framework for immune cell type–specific splicing prediction.",
-    howItWorks: [
+    methodsStack: [
       "Cell-type–specific GTF construction with StringTie using dominant isoform selection by TPM",
       "PSI extraction from rMATS and integration of exon inclusion / intron retention labels into genome-scale training targets",
       "Automated labeling of exons, introns, and intergenic regions with reproducible YAML-driven configuration",
       "Fine-tuning of Borzoi for splicing prediction using single-task and multitask training strategies",
-      "Attribution-based interpretation with DeepSHAP / TF-MoDISco to identify cis-regulatory motifs associated with lineage-specific splicing",
+      "Attribution-based interpretation with DeepSHAP / TF-MoDISco to identify cis-regulatory motifs",
       "In silico perturbation analyses to test the functional importance of discovered sequence elements"
     ],
-    engineeringChallenge: "This project required solving two tightly linked problems at once: generating high-confidence labels across multiple immune cell types without coordinate drift or label leakage, and adapting a large genomic foundation model to a splicing-specific prediction task without losing interpretability.",
-    outcome: "Produced a scalable training dataset and modeling framework for immune cell type–specific splicing, improved predictive performance over simpler baselines, and recovered interpretable candidate regulatory motifs associated with exon inclusion and intron retention across lineages. Manuscript in preparation."
+    result: "Produced a scalable training dataset and modeling framework for immune cell type–specific splicing. Improved predictive performance over simpler baselines and recovered interpretable candidate regulatory motifs. Manuscript in preparation.",
+    whyItMatters: "Sequence-to-function models that predict cell-type–specific splicing could accelerate discovery of therapeutic targets in immune dysregulation and splicing-linked disease.",
+    signalsForML: "Foundation model fine-tuning (LoRA/PEFT), multi-task learning across cell types, attribution-based interpretability, HPC multi-GPU training, reproducible ML pipelines.",
+    signalsForBio: "Cell-type–specific transcript annotation, PSI quantification across immune lineages, biologically grounded motif discovery, integration with RBP expression data.",
+    figurePlaceholderLabel: "Figure: TF-MoDISco motif clusters — lineage-specific splicing regulators"
+  },
+  {
+    title: "Adipose Tissue Transcriptomics in Lung Cancer Cachexia",
+    problem: "Does Kras\u1d33\u00b9\u00b2\u1d30/+ lung tumor induction cause transcriptional reprogramming in perigonadal white adipose tissue, and what pathways drive early adipose wasting?",
+    data: "Bulk RNA-seq from gWAT of Kras\u1d33\u00b9\u00b2\u1d30/+ and WT littermate mice at 3 and 6 weeks post-induction. Snoke DB, van der Velden JL, Dearborn J, et al. Cell Reports 2025.",
+    whatIBuilt: "DESeq2 differential expression pipeline, fgsea hallmark pathway analysis, and an interactive R/Shiny volcano and GSEA explorer published as Supplemental Figure S9.",
+    methodsStack: [
+      "DESeq2 differential expression analysis",
+      "fgsea hallmark pathway enrichment (MSigDB)",
+      "R/Shiny interactive app with adjustable padj and |LFC| thresholds",
+      "Volcano plots with hover tooltips and gene name annotation",
+      "Reactive DEG count summary table",
+      "Shinylive/WebAssembly browser deployment"
+    ],
+    result: "Identified early lipid metabolism and inflammatory pathway changes in gWAT preceding overt cachexia. Published as Supplemental Figure S9, Cell Reports (2025). DOI: 10.1016/j.celrep.2025.116278.",
+    whyItMatters: "Cachexia affects ~50% of cancer patients and is an independent predictor of mortality; characterizing adipose transcriptional programs may reveal intervention points.",
+    signalsForML: "Pathway-level summarization of high-dimensional transcriptomic data, statistical pipeline design, DESeq2 normalization and modeling.",
+    signalsForBio: "Bulk RNA-seq end-to-end, differential expression, GSEA, adipose and cancer biology, published collaborative analysis.",
+    figurePlaceholderLabel: "Figure: Volcano plot — gWAT DEGs at 3 and 6 weeks"
+  }
+];
+
+export const ML_EVIDENCE_SECTIONS: MLEvidenceSection[] = [
+  {
+    title: "Model Architecture & Foundation Model Fine-Tuning",
+    accentColor: 'blue',
+    items: [
+      "Transformer and CNN-hybrid architectures for long-range sequence context",
+      "Task-specific fine-tuning of foundation models (Borzoi) via LoRA/PEFT",
+      "Single-task and multitask prediction across B cell, T cell, and macrophage contexts",
+      "Evaluation through attribution, perturbation, and embedding-space analyses"
+    ],
+    figure: {
+      label: "Fine-tuning loss curves — Borzoi on splicing targets",
+      caption: "Training and validation loss for PSI and intron retention prediction tasks across immune lineages."
+    }
+  },
+  {
+    title: "Training Infrastructure & HPC Workflows",
+    accentColor: 'green',
+    items: [
+      "Config-driven experiments — YAML/JSON parameterization with full run logging",
+      "PyTorch Lightning — clean training loops and multi-GPU support",
+      "Mixed-precision training — fp16/bf16 for memory efficiency on large models",
+      "Structured checkpointing — resume-from-checkpoint workflows for long runs",
+      "SLURM orchestration — job submission, GPU allocation, restartable training",
+      "WandB + Optuna — experiment tracking and hyperparameter search"
+    ]
+  },
+  {
+    title: "Attribution & Interpretability",
+    accentColor: 'purple',
+    items: [
+      "DeepLIFT / DeepSHAP via Captum for per-nucleotide attribution",
+      "TF-MoDISco motif discovery from attribution maps",
+      "SEA / FIMO (MEME Suite) for motif scanning and validation",
+      "In silico mutagenesis — motif scrambling/deletion with batch prediction on perturbed sequences",
+      "Embedding-space visualization with UMAP for exploratory analysis"
+    ],
+    figure: {
+      label: "Attribution heatmap — per-nucleotide DeepSHAP scores",
+      caption: "Nucleotide-resolution attribution scores highlighting splice site and intronic regulatory elements."
+    }
+  },
+  {
+    title: "Reproducibility Practices",
+    accentColor: 'orange',
+    items: [
+      "Workflows parameterized via config files rather than hardcoded paths",
+      "Conda environments pinned and versioned per project",
+      "Outputs versioned alongside input metadata for auditability",
+      "Pipeline logic separated from execution logic for portability across HPC environments"
+    ]
   }
 ];
 
@@ -174,3 +255,6 @@ export const PRESENTATIONS: string[] = [
   "Transformer Models in Genomics (Guest Lecture)",
   "Selective RNA Depletion to Enhance Single-Cell Transcriptomics"
 ];
+
+export const COMP_BIO_PROJECTS = PROJECTS.filter((_, i) => i <= 1);
+export const ML_PROJECTS = PROJECTS.filter((_, i) => i >= 2);

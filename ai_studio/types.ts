@@ -24,11 +24,28 @@ export interface ResearchArea {
   points: string[];
 }
 
+export interface FigurePlaceholder {
+  label: string;
+  caption: string;
+  imagePath?: string;
+}
+
+export interface MLEvidenceSection {
+  title: string;
+  accentColor: 'blue' | 'green' | 'purple' | 'orange';
+  items: string[];
+  figure?: FigurePlaceholder;
+}
+
 export interface PortfolioCase {
   title: string;
-  biologicalQuestion: string;
+  problem: string;
+  data: string;
   whatIBuilt: string;
-  howItWorks: string[];
-  engineeringChallenge: string;
-  outcome: string;
+  methodsStack: string[];
+  result: string;
+  whyItMatters: string;
+  signalsForML: string;
+  signalsForBio: string;
+  figurePlaceholderLabel: string;
 }
