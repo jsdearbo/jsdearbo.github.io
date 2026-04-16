@@ -59,8 +59,8 @@ const AudienceCallouts: React.FC<{ ml: string; bio: string }> = ({ ml, bio }) =>
 );
 
 const CaseStudyCard: React.FC<{ c: PortfolioCase; idx: number; onClick: () => void }> = ({ c, idx, onClick }) => {
-  const statusLabel = idx === 2 ? 'Published' : idx === 0 ? 'In Review' : 'In Prep';
-  const statusColor = idx === 2
+  const statusLabel = idx === 2 || idx === 3 ? 'Published' : idx === 0 ? 'In Review' : 'In Prep';
+  const statusColor = idx === 2 || idx === 3
     ? 'bg-green-500/20 text-green-400'
     : idx === 0
     ? 'bg-blue-500/20 text-blue-400'
