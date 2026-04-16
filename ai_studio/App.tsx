@@ -478,14 +478,24 @@ const App: React.FC = () => {
             Runs in-browser via Shinylive — may load slowly on first visit.
           </p>
         </div>
-        <a
-          href="/shiny/gwat_rnaseq/"
-          target="_blank"
-          rel="noreferrer"
-          className="flex items-center gap-2 shrink-0 glass px-4 py-2 rounded-lg text-sm font-medium text-blue-400 hover:text-blue-300 hover:border-blue-500/50 transition-all"
-        >
-          Open app <ExternalLink size={14} />
-        </a>
+        <div className="flex items-center gap-3 shrink-0">
+          <a
+            href="/notebooks/tm01.html"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 glass px-4 py-2 rounded-lg text-sm font-medium text-blue-400 hover:text-blue-300 hover:border-blue-500/50 transition-all"
+          >
+            <FileCode size={14} /> View Notebook
+          </a>
+          <a
+            href="/shiny/gwat_rnaseq/"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 glass px-4 py-2 rounded-lg text-sm font-medium text-gray-400 hover:text-gray-300 hover:border-white/20 transition-all"
+          >
+            Open app <ExternalLink size={14} />
+          </a>
+        </div>
         </div>
       </div>
     </section>
