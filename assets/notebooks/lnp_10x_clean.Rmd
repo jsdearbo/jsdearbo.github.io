@@ -328,4 +328,4 @@ These results comprise Figure 3 of [Dowell et al., *ACS Nano* (2024)](https://do
 
 ---
 
-*Analysis: Jake Dearborn | Majumdar Lab, University of Michigan*
+*Analysis: Jake Dearborn | Majumdar Lab, University of Vermont*
