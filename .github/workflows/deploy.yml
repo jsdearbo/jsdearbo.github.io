@@ -64,6 +64,12 @@ jobs:
           mkdir -p ai_studio/public/notebooks
           cp assets/notebooks/lnp_10x.html ai_studio/public/notebooks/lnp_10x.html
 
+      - name: Stage TM01 analysis assets
+        run: |
+          mkdir -p ai_studio/public/assets/images/tm01
+          cp assets/images/tm01/*.png ai_studio/public/assets/images/tm01/
+          cp assets/notebooks/tm01.html ai_studio/public/notebooks/tm01.html
+
       - name: Build
         working-directory: ai_studio
         run: npm run build

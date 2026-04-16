@@ -150,7 +150,15 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     whyItMatters: "Cachexia affects ~50% of cancer patients and is an independent predictor of mortality; characterizing adipose transcriptional programs may reveal intervention points.",
     signalsForML: "Pathway-level summarization of high-dimensional transcriptomic data, statistical pipeline design, DESeq2 normalization and modeling.",
     signalsForBio: "Bulk RNA-seq end-to-end, differential expression, GSEA, adipose and cancer biology, published collaborative analysis.",
-    figurePlaceholderLabel: "Figure: Volcano plot — gWAT DEGs at 3 and 6 weeks"
+    figurePlaceholderLabel: "Volcano — 6-week gWAT KRAS vs. WT",
+    figureImagePath: "/assets/images/tm01/volcano_6wk_gwat.png",
+    figureRightPaths: [
+      "/assets/images/tm01/gsea_6wk_gwat.png",
+    ],
+    figureRightLabels: [
+      "GSEA — top 25 Hallmark pathways, 6-week gWAT KRAS vs. WT",
+    ],
+    notebookPath: "/notebooks/tm01.html",
   },
   {
     title: "Single-Cell Transcriptomics of the Intramuscular mRNA/LNP Immune Response",
