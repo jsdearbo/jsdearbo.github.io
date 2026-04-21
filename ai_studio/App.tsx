@@ -418,6 +418,47 @@ const App: React.FC = () => {
 
       {/* Published analyses — secondary links */}
       <div className="space-y-4">
+        {/* SRA to BigWigs pipeline */}
+        <div className="glass p-6 rounded-2xl border border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div className="space-y-2">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider bg-purple-500/20 text-purple-400">
+                Open Source
+              </span>
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider bg-white/10 text-gray-400">
+                Bash · STAR · Trimmomatic · deepTools
+              </span>
+            </div>
+            <h4 className="font-semibold text-base">
+              SRA to BigWigs — Public RNA-seq Processing Pipeline
+            </h4>
+            <p className="text-sm text-gray-500 max-w-xl">
+              Configurable bash pipeline that converts public SRA accessions into CPM-normalized
+              BigWig coverage tracks. Handles SRA download, adapter trimming, STAR alignment,
+              and deepTools coverage generation — designed to help lab collaborators inspect
+              public RNA-seq datasets at specific genomic loci without manual reprocessing.
+            </p>
+          </div>
+          <div className="flex items-center gap-3 shrink-0">
+            <a
+              href="/notebooks/sra_to_bigwigs.html"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 glass px-4 py-2 rounded-lg text-sm font-medium text-blue-400 hover:text-blue-300 hover:border-blue-500/50 transition-all"
+            >
+              <FileCode size={14} /> View Notebook
+            </a>
+            <a
+              href="https://github.com/jsdearbo/SRA_to_BigWigs"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 glass px-4 py-2 rounded-lg text-sm font-medium text-gray-400 hover:text-gray-300 hover:border-white/20 transition-all"
+            >
+              View on GitHub <ExternalLink size={14} />
+            </a>
+          </div>
+        </div>
+
         {/* ACS Nano scRNA-seq */}
         <div className="glass p-6 rounded-2xl border border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="space-y-2">

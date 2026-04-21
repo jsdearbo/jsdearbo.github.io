@@ -70,6 +70,12 @@ jobs:
           cp assets/images/tm01/*.png ai_studio/public/assets/images/tm01/
           cp assets/notebooks/tm01.html ai_studio/public/notebooks/tm01.html
 
+      - name: Stage SRA_to_BigWigs assets
+        run: |
+          mkdir -p ai_studio/public/assets/images/sra_to_bigwigs
+          cp assets/images/sra_to_bigwigs/*.png ai_studio/public/assets/images/sra_to_bigwigs/
+          cp assets/notebooks/sra_to_bigwigs.html ai_studio/public/notebooks/sra_to_bigwigs.html
+
       - name: Build
         working-directory: ai_studio
         run: npm run build
