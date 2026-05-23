@@ -98,6 +98,11 @@ jobs:
           mkdir -p ai_studio/public/assets/images/splice_model
           cp assets/images/splice_model/*.png ai_studio/public/assets/images/splice_model/
 
+      - name: Stage delay splice assets
+        run: |
+          mkdir -p ai_studio/public/assets/images/delay_splice
+          cp assets/images/delay_splice/*.png ai_studio/public/assets/images/delay_splice/
+
       - name: Build
         working-directory: ai_studio
         run: npm run build
