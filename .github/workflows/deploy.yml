@@ -33,8 +33,15 @@ jobs:
 
       - name: Install R packages
         run: |
-          Rscript -e "install.packages(c('shinylive', 'shiny', 'plotly', 'dplyr', 'stringr'), repos = 'https://cloud.r-project.org')"
-          Rscript -e "stopifnot(requireNamespace('shinylive', quietly = TRUE)); cat('shinylive', as.character(packageVersion('shinylive')), 'ready\n')"
+          Rscript -e "
+            options(repos = c(
+              RSPM = 'https://packagemanager.posit.co/cran/__linux__/noble/latest',
+              CRAN = 'https://cloud.r-project.org'
+            ))
+            install.packages(c('shinylive', 'shiny', 'plotly', 'dplyr', 'stringr'), dependencies = TRUE)
+            stopifnot(requireNamespace('shinylive', quietly = TRUE))
+            cat('shinylive', as.character(packageVersion('shinylive')), 'ready\n')
+          "
 
       - name: Export Shiny app with shinylive
         run: |
