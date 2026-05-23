@@ -13,7 +13,7 @@ export interface Publication {
   authors: string;
   journal: string;
   year: string;
-  status: 'In Review' | 'Published' | 'Preprint' | 'In Preparation';
+  status: 'In Review' | 'Published' | 'Preprint' | 'Reviewed Preprint' | 'In Preparation';
   link?: string;
   doi?: string;
 }

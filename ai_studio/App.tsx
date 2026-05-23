@@ -565,6 +565,7 @@ const App: React.FC = () => {
               <div className="flex items-center gap-3">
                 <span className={`text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider ${
                   pub.status === 'Published' ? 'bg-green-500/20 text-green-400' :
+                  pub.status === 'Reviewed Preprint' ? 'bg-teal-500/20 text-teal-400' :
                   pub.status === 'In Review' ? 'bg-cyan-500/20 text-cyan-400' :
                   pub.status === 'In Preparation' ? 'bg-gray-500/20 text-gray-400' :
                   'bg-yellow-500/20 text-yellow-400'
@@ -577,14 +578,14 @@ const App: React.FC = () => {
               <p className="text-sm text-gray-500">{pub.authors} — <span className="italic">{pub.journal}</span></p>
             </div>
 
-            {pub.doi && (
+            {(pub.link || pub.doi) && (
               <a
-                href={`https://doi.org/${pub.doi}`}
+                href={pub.link ?? `https://doi.org/${pub.doi}`}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2 text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors shrink-0"
               >
-                DOI <ExternalLink size={14} />
+                {pub.link ? 'View' : 'DOI'} <ExternalLink size={14} />
               </a>
             )}
           </div>

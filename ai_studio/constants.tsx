@@ -111,7 +111,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     "Attribution-based model interpretation to identify high-importance sequence regions near slow-splicing introns",
     "Motif enrichment analysis using FIMO / SEA to compare slow-splicing introns against background introns"
   ],
-  result: "Identified a subset of inflammatory introns that behave as reproducible processing bottlenecks, delaying productive mRNA maturation beyond transcriptional activation alone. Weak 5′ splice donors contributed to delayed excision in selected introns, while model-guided interpretation nominated additional candidate sequence features associated with the slow-splicing class. First-author manuscript in review at eLife.",
+  result: "Identified a subset of inflammatory introns that behave as reproducible processing bottlenecks, delaying productive mRNA maturation beyond transcriptional activation alone. Weak 5′ splice donors contributed to delayed excision in selected introns, while model-guided interpretation nominated additional candidate sequence features associated with the slow-splicing class. First-author manuscript available as a reviewed preprint at eLife (elifesciences.org/reviewed-preprints/109726).",
   whyItMatters: "This work highlights RNA processing kinetics as an important layer of immune gene regulation. By combining intron-resolution kinetics with regulatory sequence modeling, the project connects inflammatory transcript maturation to candidate cis-regulatory architecture beyond transcriptional activation alone.",
   signalsForML: "Genomic foundation model fine-tuning, attribution-based interpretability, motif enrichment analysis, sequence-feature integration, custom metric design, quantitative kinetic modeling, reproducible regulatory genomics pipelines.",
   signalsForBio: "Intron-resolution splicing kinetics, NF-κB–responsive inflammatory gene regulation, chromatin-associated RNA analysis, splice-site mechanism, minigene validation, computational nomination of candidate cis-regulatory features.",
@@ -261,8 +261,9 @@ export const PUBLICATIONS: Publication[] = [
     authors: "Dearborn, J., Frankiw, L., Majumdar, D.",
     journal: "eLife",
     year: "2025",
-    status: "In Review",
-    doi: "10.1101/443796"
+    status: "Reviewed Preprint",
+    doi: "10.1101/443796",
+    link: "https://elifesciences.org/reviewed-preprints/109726"
   },
   {
     title: "Decoding immune cell type–specific alternative splicing regulatory programs.",
