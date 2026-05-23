@@ -6,16 +6,16 @@ import { PortfolioCase } from './types';
 import { Github, Linkedin, Mail, FileText, ExternalLink, Code2, Beaker, Cpu, Database, ArrowRight, BarChart2, FlaskConical, FileCode } from 'lucide-react';
 
 const accentBorderMap: Record<string, string> = {
-  blue: 'border-l-blue-600',
+  cyan: 'border-l-cyan-600',
   green: 'border-l-green-600',
-  purple: 'border-l-purple-600',
+  teal: 'border-l-teal-600',
   orange: 'border-l-orange-600',
 };
 
 const accentTextMap: Record<string, string> = {
-  blue: 'text-blue-500',
+  cyan: 'text-cyan-500',
   green: 'text-green-500',
-  purple: 'text-purple-500',
+  teal: 'text-teal-500',
   orange: 'text-orange-500',
 };
 
@@ -41,19 +41,19 @@ const FigurePlaceholderBlock: React.FC<{ label: string; imagePath?: string }> = 
 
 const AudienceCallouts: React.FC<{ ml: string; bio: string }> = ({ ml, bio }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
-    <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-4">
+    <div className="bg-cyan-500/10 border border-cyan-500/20 rounded-xl p-4">
       <div className="flex items-center gap-2 mb-2">
-        <Cpu size={13} className="text-blue-400 shrink-0" />
-        <span className="text-[10px] font-bold uppercase tracking-widest text-blue-400">Signals for ML Teams</span>
+        <Cpu size={13} className="text-cyan-400 shrink-0" />
+        <span className="text-[10px] font-bold uppercase tracking-widest text-cyan-400">Signals for ML Teams</span>
       </div>
-      <p className="text-sm text-blue-100/80 leading-relaxed">{ml}</p>
+      <p className="text-sm text-cyan-100/80 leading-relaxed">{ml}</p>
     </div>
-    <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-4">
+    <div className="bg-teal-500/10 border border-teal-500/20 rounded-xl p-4">
       <div className="flex items-center gap-2 mb-2">
-        <FlaskConical size={13} className="text-purple-400 shrink-0" />
-        <span className="text-[10px] font-bold uppercase tracking-widest text-purple-400">Signals for Bio Teams</span>
+        <FlaskConical size={13} className="text-teal-400 shrink-0" />
+        <span className="text-[10px] font-bold uppercase tracking-widest text-teal-400">Signals for Bio Teams</span>
       </div>
-      <p className="text-sm text-purple-100/80 leading-relaxed">{bio}</p>
+      <p className="text-sm text-teal-100/80 leading-relaxed">{bio}</p>
     </div>
   </div>
 );
@@ -63,7 +63,7 @@ const CaseStudyCard: React.FC<{ c: PortfolioCase; idx: number; onClick: () => vo
   const statusColor = idx === 2 || idx === 3
     ? 'bg-green-500/20 text-green-400'
     : idx === 0
-    ? 'bg-blue-500/20 text-blue-400'
+    ? 'bg-cyan-500/20 text-cyan-400'
     : 'bg-gray-500/20 text-gray-400';
   return (
     <div
@@ -73,9 +73,9 @@ const CaseStudyCard: React.FC<{ c: PortfolioCase; idx: number; onClick: () => vo
       <span className={`text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded self-start ${statusColor}`}>
         {statusLabel}
       </span>
-      <h3 className="font-bold text-base leading-snug group-hover:text-blue-400 transition-colors">{c.title}</h3>
+      <h3 className="font-bold text-base leading-snug group-hover:text-cyan-400 transition-colors">{c.title}</h3>
       <p className="text-sm text-gray-500 leading-relaxed line-clamp-3">{c.problem}</p>
-      <div className="pt-2 text-xs text-blue-400 flex items-center gap-1 font-medium mt-auto">
+      <div className="pt-2 text-xs text-cyan-400 flex items-center gap-1 font-medium mt-auto">
         Read case study <ArrowRight size={12} />
       </div>
     </div>
@@ -90,14 +90,14 @@ const App: React.FC = () => {
       {/* Hero */}
       <div className="flex flex-col items-center text-center space-y-8 pt-12">
         <div className="relative">
-          <div className="w-32 h-32 rounded-full border-2 border-blue-500/50 p-1">
+          <div className="w-32 h-32 rounded-full border-2 border-cyan-500/50 p-1">
             <img
               src="/assets/images/headshot.jpg"
               alt="Jake Dearborn"
               className="w-full h-full rounded-full grayscale hover:grayscale-0 transition-all duration-500 object-cover"
             />
           </div>
-          <div className="absolute -bottom-2 -right-2 bg-blue-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+          <div className="absolute -bottom-2 -right-2 bg-cyan-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
             PhD Candidate
           </div>
         </div>
@@ -123,7 +123,7 @@ const App: React.FC = () => {
         <div className="flex flex-wrap justify-center gap-4">
           <button
             onClick={() => setActiveSection('Selected Work')}
-            className="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-xl flex items-center gap-2 transition-all font-semibold"
+            className="bg-cyan-600 hover:bg-cyan-500 px-6 py-3 rounded-xl flex items-center gap-2 transition-all font-semibold"
           >
             View Selected Work
             <ArrowRight size={16} />
@@ -132,18 +132,18 @@ const App: React.FC = () => {
             href="/Dearborn_CV_March_2026.pdf"
             target="_blank"
             rel="noreferrer"
-            className="glass px-6 py-3 rounded-xl flex items-center gap-2 hover:border-blue-500/50 transition-all"
+            className="glass px-6 py-3 rounded-xl flex items-center gap-2 hover:border-cyan-500/50 transition-all"
           >
-            <FileText size={18} className="text-blue-400" />
+            <FileText size={18} className="text-cyan-400" />
             <span>Download CV</span>
           </a>
           <a
             href="https://github.com/jsdearbo"
             target="_blank"
             rel="noreferrer"
-            className="glass px-6 py-3 rounded-xl flex items-center gap-2 hover:border-purple-500/50 transition-all"
+            className="glass px-6 py-3 rounded-xl flex items-center gap-2 hover:border-teal-500/50 transition-all"
           >
-            <Github size={18} className="text-purple-400" />
+            <Github size={18} className="text-teal-400" />
             <span>GitHub</span>
           </a>
         </div>
@@ -169,8 +169,8 @@ const App: React.FC = () => {
       {/* Skills quick-scan */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
-          { icon: <Cpu className="text-blue-400" />, title: "Machine Learning", desc: "PyTorch, Transformers, LoRA/PEFT, Lightning, WandB, Optuna" },
-          { icon: <Beaker className="text-purple-400" />, title: "RNA Biology", desc: "Splicing kinetics, intron retention, motif discovery, NF-κB regulation" },
+          { icon: <Cpu className="text-cyan-400" />, title: "Machine Learning", desc: "PyTorch, Transformers, LoRA/PEFT, Lightning, WandB, Optuna" },
+          { icon: <Beaker className="text-teal-400" />, title: "RNA Biology", desc: "Splicing kinetics, intron retention, motif discovery, NF-κB regulation" },
           { icon: <Database className="text-green-400" />, title: "Genomics", desc: "RNA-seq, scRNA-seq, CITE-seq, PSI/IR analysis, single-cell workflows" },
           { icon: <Code2 className="text-orange-400" />, title: "Infrastructure", desc: "HPC/SLURM, multi-GPU, reproducible pipelines, Conda, config-driven runs" }
         ].map((skill, i) => (
@@ -185,14 +185,14 @@ const App: React.FC = () => {
       </div>
 
       {/* Dissertation callout */}
-      <div className="glass p-8 rounded-3xl border-l-4 border-l-blue-600 max-w-3xl">
+      <div className="glass p-8 rounded-3xl border-l-4 border-l-cyan-600 max-w-3xl">
         <h2 className="text-xl font-bold mb-3">Dissertation</h2>
         <p className="text-gray-300 leading-relaxed mb-3">
           <span className="text-white font-medium italic">"Timing and Specificity in the Immune Transcriptome: Unraveling Splicing Dynamics through Computational Regulatory Genomics"</span>
         </p>
         <p className="text-gray-500 text-sm">
           First-author manuscript on programmed delayed splicing currently{' '}
-          <span className="text-blue-400">in review at eLife</span>. Recent collaborative work
+          <span className="text-cyan-400">in review at eLife</span>. Recent collaborative work
           published in <span className="italic">Cell Reports</span> (2025) and{' '}
           <span className="italic">ACS Nano</span> (2024).
         </p>
@@ -212,7 +212,7 @@ const App: React.FC = () => {
 
       <div className="space-y-10">
         {PORTFOLIO_CASES.map((c, i) => (
-          <div key={i} className="glass p-8 rounded-3xl border-l-4 border-l-purple-600 space-y-6">
+          <div key={i} className="glass p-8 rounded-3xl border-l-4 border-l-teal-600 space-y-6">
             <h3 className="text-2xl font-bold">{c.title}</h3>
 
             {c.figureRightPaths ? (
@@ -238,7 +238,7 @@ const App: React.FC = () => {
                 href={c.notebookPath}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition-colors"
+                className="inline-flex items-center gap-2 text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
               >
                 <FileCode size={14} /> View Analysis Notebook <ExternalLink size={12} />
               </a>
@@ -265,7 +265,7 @@ const App: React.FC = () => {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {c.methodsStack.map((step, j) => (
                   <li key={j} className="flex items-start gap-2 text-sm text-gray-500">
-                    <span className="text-purple-500 mt-1 shrink-0">▹</span>{step}
+                    <span className="text-teal-500 mt-1 shrink-0">▹</span>{step}
                   </li>
                 ))}
               </ul>
@@ -304,7 +304,7 @@ const App: React.FC = () => {
             href="https://github.com/jsdearbo/sequence_to_function_model_tools"
             target="_blank"
             rel="noreferrer"
-            className="text-blue-400 hover:text-blue-300 transition-colors"
+            className="text-cyan-400 hover:text-cyan-300 transition-colors"
           >
             sequence_to_function_model_tools
           </a>.
@@ -345,7 +345,7 @@ const App: React.FC = () => {
                 <p className="text-xs font-bold uppercase text-gray-600 mb-2 tracking-widest">Built with</p>
                 <div className="flex flex-wrap gap-2">
                   {project.howItsBuilt.map((item, j) => (
-                    <span key={j} className="mono text-[11px] bg-blue-500/10 text-blue-300 px-2 py-0.5 rounded">
+                    <span key={j} className="mono text-[11px] bg-cyan-500/10 text-cyan-300 px-2 py-0.5 rounded">
                       {item}
                     </span>
                   ))}
@@ -422,7 +422,7 @@ const App: React.FC = () => {
         <div className="glass p-6 rounded-2xl border border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="space-y-2">
             <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider bg-purple-500/20 text-purple-400">
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider bg-teal-500/20 text-teal-400">
                 Open Source
               </span>
               <span className="text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider bg-white/10 text-gray-400">
@@ -444,7 +444,7 @@ const App: React.FC = () => {
               href="/notebooks/sra_to_bigwigs.html"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 glass px-4 py-2 rounded-lg text-sm font-medium text-blue-400 hover:text-blue-300 hover:border-blue-500/50 transition-all"
+              className="flex items-center gap-2 glass px-4 py-2 rounded-lg text-sm font-medium text-cyan-400 hover:text-cyan-300 hover:border-cyan-500/50 transition-all"
             >
               <FileCode size={14} /> View Notebook
             </a>
@@ -484,7 +484,7 @@ const App: React.FC = () => {
               href="/notebooks/lnp_10x.html"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 glass px-4 py-2 rounded-lg text-sm font-medium text-blue-400 hover:text-blue-300 hover:border-blue-500/50 transition-all"
+              className="flex items-center gap-2 glass px-4 py-2 rounded-lg text-sm font-medium text-cyan-400 hover:text-cyan-300 hover:border-cyan-500/50 transition-all"
             >
               <FileCode size={14} /> View Notebook
             </a>
@@ -524,7 +524,7 @@ const App: React.FC = () => {
             href="/notebooks/tm01.html"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 glass px-4 py-2 rounded-lg text-sm font-medium text-blue-400 hover:text-blue-300 hover:border-blue-500/50 transition-all"
+            className="flex items-center gap-2 glass px-4 py-2 rounded-lg text-sm font-medium text-cyan-400 hover:text-cyan-300 hover:border-cyan-500/50 transition-all"
           >
             <FileCode size={14} /> View Notebook
           </a>
@@ -551,12 +551,12 @@ const App: React.FC = () => {
 
       <div className="space-y-6">
         {PUBLICATIONS.map((pub, i) => (
-          <div key={i} className="glass p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-white/[0.03] transition-colors border-l-2 border-l-transparent hover:border-l-blue-500">
+          <div key={i} className="glass p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-white/[0.03] transition-colors border-l-2 border-l-transparent hover:border-l-cyan-500">
             <div className="space-y-2 max-w-2xl">
               <div className="flex items-center gap-3">
                 <span className={`text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider ${
                   pub.status === 'Published' ? 'bg-green-500/20 text-green-400' :
-                  pub.status === 'In Review' ? 'bg-blue-500/20 text-blue-400' :
+                  pub.status === 'In Review' ? 'bg-cyan-500/20 text-cyan-400' :
                   pub.status === 'In Preparation' ? 'bg-gray-500/20 text-gray-400' :
                   'bg-yellow-500/20 text-yellow-400'
                 }`}>
@@ -573,7 +573,7 @@ const App: React.FC = () => {
                 href={`https://doi.org/${pub.doi}`}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors shrink-0"
+                className="flex items-center gap-2 text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors shrink-0"
               >
                 DOI <ExternalLink size={14} />
               </a>
@@ -587,7 +587,7 @@ const App: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {PRESENTATIONS.map((talk, i) => (
             <div key={i} className="glass px-4 py-3 rounded-xl text-sm text-gray-400 flex items-center gap-3">
-              <Beaker size={14} className="text-purple-400 shrink-0" />
+              <Beaker size={14} className="text-teal-400 shrink-0" />
               {talk}
             </div>
           ))}
@@ -600,8 +600,8 @@ const App: React.FC = () => {
     <div className="min-h-screen relative overflow-x-hidden">
       {/* Background decor */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/10 blur-[120px] rounded-full"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-600/10 blur-[120px] rounded-full"></div>
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-cyan-600/10 blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-teal-600/10 blur-[120px] rounded-full"></div>
         <div className="dna-gradient fixed inset-0 opacity-10"></div>
       </div>
 

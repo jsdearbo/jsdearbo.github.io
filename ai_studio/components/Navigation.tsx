@@ -42,7 +42,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection
                 key={item.label}
                 onClick={() => setActiveSection(item.section!)}
                 className={`text-sm font-medium transition-colors ${
-                  activeSection === item.section ? 'text-blue-400' : 'text-gray-400 hover:text-white'
+                  activeSection === item.section ? 'text-cyan-400' : 'text-gray-400 hover:text-white'
                 }`}
               >
                 {item.label}

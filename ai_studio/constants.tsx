@@ -194,7 +194,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
 export const ML_EVIDENCE_SECTIONS: MLEvidenceSection[] = [
   {
     title: "Model Architecture & Foundation Model Fine-Tuning",
-    accentColor: 'blue',
+    accentColor: 'cyan',
     items: [
       "Transformer and CNN-hybrid architectures for long-range sequence context",
       "Task-specific fine-tuning of foundation models (Borzoi) via LoRA/PEFT",
@@ -220,7 +220,7 @@ export const ML_EVIDENCE_SECTIONS: MLEvidenceSection[] = [
   },
   {
     title: "Attribution & Interpretability",
-    accentColor: 'purple',
+    accentColor: 'teal',
     items: [
       "DeepLIFT / DeepSHAP via Captum for per-nucleotide attribution",
       "TF-MoDISco motif discovery from attribution maps",
