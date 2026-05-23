@@ -198,53 +198,59 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
 export const ML_EVIDENCE_SECTIONS: MLEvidenceSection[] = [
   {
     title: "Model Architecture & Foundation Model Fine-Tuning",
-    accentColor: 'cyan',
+    accentColor: "cyan",
     items: [
-      "Transformer and CNN-hybrid architectures for long-range sequence context",
-      "Task-specific fine-tuning of foundation models (Borzoi) via LoRA/PEFT",
-      "Single-task and multitask prediction across B cell, T cell, and macrophage contexts",
-      "Evaluation through attribution, perturbation, and embedding-space analyses"
+      "Long-context regulatory genomics models combining convolutional, transformer, and U-Net-style sequence representations",
+      "Task-specific fine-tuning of Borzoi for immune splicing and inflammatory gene-expression prediction tasks",
+      "LoRA / PEFT adaptation strategies for immune cell type–specific PSI label modeling",
+      "Single-task and multitask prediction across B cell, T cell, and macrophage splicing contexts",
+      "Baseline benchmarking against simpler sequence-feature models",
+      "Representation analysis using UMAP and KNN probes to assess whether fine-tuning makes PSI-relevant information more accessible in learned embeddings"
     ],
-    figure: {
-      label: "Fine-tuning loss curves — Borzoi on splicing targets",
-      caption: "Training and validation loss for PSI and intron retention prediction tasks across immune lineages."
-    }
+    // figure: {
+    //   label: "Fine-tuning loss curves — Borzoi on splicing targets",
+    //   caption:
+    //     "Training and validation loss curves from Borzoi fine-tuning experiments on immune splicing prediction tasks."
+    // }
   },
   {
     title: "Training Infrastructure & HPC Workflows",
-    accentColor: 'green',
+    accentColor: "green",
     items: [
-      "Config-driven experiments — YAML/JSON parameterization with full run logging",
-      "PyTorch Lightning — clean training loops and multi-GPU support",
-      "Mixed-precision training — fp16/bf16 for memory efficiency on large models",
-      "Structured checkpointing — resume-from-checkpoint workflows for long runs",
-      "SLURM orchestration — job submission, GPU allocation, restartable training",
-      "WandB + Optuna — experiment tracking and hyperparameter search"
+      "Config-driven experiments using YAML/JSON parameterization and reproducible run metadata",
+      "PyTorch Lightning training workflows with clean training loops, checkpointing, and multi-GPU support",
+      "Mixed-precision training with fp16/bf16 for memory-efficient long-sequence modeling",
+      "Structured checkpointing and resume-from-checkpoint workflows for long-running experiments",
+      "SLURM orchestration for GPU allocation, batch jobs, and restartable training",
+      "WandB and Optuna for experiment tracking, diagnostics, and hyperparameter search"
     ]
   },
   {
     title: "Attribution & Interpretability",
-    accentColor: 'teal',
+    accentColor: "teal",
     items: [
-      "DeepLIFT / DeepSHAP via Captum for per-nucleotide attribution",
-      "TF-MoDISco motif discovery from attribution maps",
-      "SEA / FIMO (MEME Suite) for motif scanning and validation",
-      "In silico mutagenesis — motif scrambling/deletion with batch prediction on perturbed sequences",
-      "Embedding-space visualization with UMAP for exploratory analysis"
+      "Per-nucleotide attribution using DeepLIFT / DeepSHAP-style methods through Captum",
+      "TF-MoDISco motif discovery from attribution maps to summarize recurrent high-importance sequence patterns",
+      "SEA / FIMO motif scanning and enrichment analysis using MEME Suite",
+      "In silico perturbation through motif scrambling/deletion with batch prediction on modified sequences",
+      "Embedding-space visualization with UMAP for exploratory representation analysis",
+      "KNN probing of model embeddings to quantify recoverability of splice-site and PSI-associated information"
     ],
-    figure: {
-      label: "Attribution heatmap — per-nucleotide DeepSHAP scores",
-      caption: "Nucleotide-resolution attribution scores highlighting splice site and intronic regulatory elements."
-    }
+    // figure: {
+    //   label: "Attribution heatmap — per-nucleotide DeepSHAP scores",
+    //   caption:
+    //     "Nucleotide-resolution attribution scores highlighting sequence regions prioritized by fine-tuned regulatory genomics models."
+    // }
   },
   {
     title: "Reproducibility Practices",
-    accentColor: 'orange',
+    accentColor: "orange",
     items: [
       "Workflows parameterized via config files rather than hardcoded paths",
       "Conda environments pinned and versioned per project",
       "Outputs versioned alongside input metadata for auditability",
-      "Pipeline logic separated from execution logic for portability across HPC environments"
+      "Pipeline logic separated from execution logic for portability across HPC environments",
+      "Intermediate files and model outputs organized for downstream interpretation, plotting, and manuscript-scale reproducibility"
     ]
   }
 ];
