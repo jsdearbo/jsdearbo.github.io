@@ -93,6 +93,11 @@ jobs:
           cp assets/images/sra_to_bigwigs/*.png ai_studio/public/assets/images/sra_to_bigwigs/
           cp assets/notebooks/sra_to_bigwigs.html ai_studio/public/notebooks/sra_to_bigwigs.html
 
+      - name: Stage splice_model assets
+        run: |
+          mkdir -p ai_studio/public/assets/images/splice_model
+          cp assets/images/splice_model/*.png ai_studio/public/assets/images/splice_model/
+
       - name: Build
         working-directory: ai_studio
         run: npm run build
