@@ -115,23 +115,23 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     figurePlaceholderLabel: "Figure: CoSI kinetic profiles — bottleneck vs. non-bottleneck introns"
   },
   {
-    title: "Decoding Immune Cell Type–Specific Splicing with Foundation Models",
-    problem: "How do B cells, T cells, and macrophages deploy distinct splicing programs from the same genome, and can a sequence-to-function model learn those differences? Answering this required building cell-type–resolved training labels at scale and adapting a genomic foundation model for splicing prediction.",
-    data: "Bulk RNA-seq from 3 immune lineages; ~50,000 PSI and intron retention labels generated at genome scale; Borzoi model weights (pre-trained on 524kb sequence contexts).",
+    title: "Modeling Immune Cell Type–Specific Splicing with Genomic Foundation Models",
+    problem: "B cells, T cells, and macrophages share the same genome but exhibit distinct transcript isoform landscapes. I wanted to test whether genomic sequence models could learn features associated with immune cell type–specific splicing outcomes, and whether model representations could provide interpretable hypotheses about sequence-encoded regulation.",
+    data: "Bulk RNA-seq from three immune lineages: B cells, T cells, and macrophages.Genome-scale PSI and intron-retention labels generated from rMATS-derived splicing events and transcript-aware annotations.Pretrained Borzoi model weights using long genomic sequence context.",
     whatIBuilt: "A unified data engineering, modeling, and interpretation framework for immune cell type–specific splicing prediction.",
     methodsStack: [
       "Cell-type–specific GTF construction with StringTie using dominant isoform selection by TPM",
-      "PSI extraction from rMATS and integration of exon inclusion / intron retention labels into genome-scale training targets",
-      "Automated labeling of exons, introns, and intergenic regions with reproducible YAML-driven configuration",
-      "Fine-tuning of Borzoi for splicing prediction using single-task and multitask training strategies",
-      "Attribution-based interpretation with DeepSHAP / TF-MoDISco to identify cis-regulatory motifs",
-      "In silico perturbation analyses to test the functional importance of discovered sequence elements"
+      "PSI and intron-retention label generation from rMATS event tables",
+      "Integration of exon inclusion, intron retention, constitutive exon, intron, and intergenic labels into genome-scale training targets",
+      "Fine-tuning of Borzoi for single-task and multitask splicing prediction across immune lineages",
+      "Representation analysis of pretrained and fine-tuned embeddings using UMAP and KNN probing"
     ],
-    result: "Produced a scalable training dataset and modeling framework for immune cell type–specific splicing. Improved predictive performance over simpler baselines and recovered interpretable candidate regulatory motifs. Manuscript in preparation.",
-    whyItMatters: "Sequence-to-function models that predict cell-type–specific splicing could accelerate discovery of therapeutic targets in immune dysregulation and splicing-linked disease.",
-    signalsForML: "Foundation model fine-tuning (LoRA/PEFT), multi-task learning across cell types, attribution-based interpretability, HPC multi-GPU training, reproducible ML pipelines.",
-    signalsForBio: "Cell-type–specific transcript annotation, PSI quantification across immune lineages, biologically grounded motif discovery, integration with RBP expression data.",
-    figurePlaceholderLabel: "Figure: TF-MoDISco motif clusters — lineage-specific splicing regulators"
+    result: "Built a scalable training-label and modeling framework for immune cell type–specific splicing prediction. Fine-tuning improved prediction relative to simpler sequence-feature baselines and shifted output-proximal model representations toward PSI-relevant structure. Interpretation analyses nominated candidate cis-regulatory motifs and sequence contexts associated with differential splicing, providing hypotheses for future experimental validation. Manuscript in preparation.",
+    whyItMatters: "Cell-type-specific splicing is an important layer of immune gene regulation, but it is difficult to model directly from sequence. This project establishes a framework for connecting transcript-aware splicing labels, genomic foundation model fine-tuning, and interpretable sequence analysis to study how immune splicing variation may be encoded in genomic context.",
+    signalsForML: "Foundation model adaptation, long-sequence genomic modeling, multitask learning, representation analysis, attribution-based interpretability, baseline benchmarking, HPC / multi-GPU training, reproducible ML pipelines.",
+    signalsForBio: "Cell-type-specific transcript annotation, PSI and intron-retention quantification, immune-lineage splicing analysis, transcript-aware label construction, candidate motif discovery, integration of sequence features with RNA biology.",
+    figurePlaceholderLabel: "Figure: Transcript-aware construction of immune cell type–specific splicing labels",
+    figureImagePath: "/assets/images/splice_model/data_labelling.png",
   },
   {
     title: "Adipose Tissue Transcriptomics in Lung Cancer Cachexia",
@@ -176,7 +176,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     result: "Identified 9 immune populations in injected muscle. Neutrophils and monocytes from SM-102-injected mice upregulate ISGs (Irf7, Isg15), inflammasome components (Nlrp3, Il1b), and cytokines (Tnf, Cxcl2) — published as Figure 3, Dowell et al., ACS Nano 2024 (doi:10.1021/acsnano.4c08490).",
     whyItMatters: "Single-cell resolution revealed that myeloid infiltrates — not muscle tissue in bulk — are the source of the LNP-driven inflammatory program. This reframes how vaccine lipid adjuvancy works and provides a design principle distinguishing vaccine-grade (Class A) from therapeutic-grade (Class B) ionizable lipids.",
     signalsForML: "Unsupervised clustering of high-dimensional count data, evaluation of automated cell type classification (scType) against manual ground truth, per-cluster differential ranking from FindAllMarkers — analogous to unsupervised representation learning with post-hoc class label assignment and feature attribution.",
-    signalsForBio: "Multi-sample hashtag demultiplexing, QC filtering (nFeature > 500, MT% < 10%), SCTransform normalization with confounder regression, marker-based cell type validation across monocytes, neutrophils, DCs, NK cells, B cells, T cells, pDCs, and RBCs.",
+    signalsForBio: "Multi-sample hashtag demultiplexing, QC filtering (nFeature > 500, MT% < 10%), SCTransform normalization with confounder regression, marker-based cell type validation across monocytes, neutrophils, DCs, NK cells, B cells, T cells, and pDCs.",
     figurePlaceholderLabel: "UMAP — CD45+ immune infiltrates (9 populations, manual annotation)",
     figureImagePath: "/assets/images/lnp/umap_annotated.png",
     figureRightPaths: [
