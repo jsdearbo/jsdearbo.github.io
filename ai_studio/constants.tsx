@@ -97,23 +97,26 @@ export const PROJECTS: Project[] = [
 
 export const PORTFOLIO_CASES: PortfolioCase[] = [
   {
-    title: "Programmed Splicing Kinetics in the Inflammatory Response",
-    problem: "Do splicing delays in NF-κB–responsive genes reflect a programmed regulatory mechanism, or are they stochastic noise? Answering this required moving from descriptive catalogs of splicing events to a quantitative kinetic framework operating at intron resolution.",
-    data: "Kinetic RNA-seq time series from LPS-stimulated macrophages across 7 timepoints; ~12,000 annotated introns across the NF-κB–responsive transcriptome.",
-    whatIBuilt: "An end-to-end Python pipeline to quantify intron excision dynamics from kinetic RNA-seq data across the NF-κB–responsive transcriptome.",
-    methodsStack: [
-      "STAR alignment of kinetic RNA-seq time series",
-      "Custom interval engineering for intron-level quantification",
-      "Adapted Completed Splicing Index (CoSI) to quantify splicing completion per intron and timepoint",
-      "Python-based aggregation, normalization, and visualization across replicates and conditions",
-      "Follow-up sequence modeling to prioritize candidate regulatory features"
-    ],
-    result: "Identified a class of 'bottleneck introns' that delay inflammatory gene expression. Minigene assays experimentally validated that weak 5' splice donors drive this delay. First-author manuscript in review at eLife.",
-    whyItMatters: "RNA processing rate is an underexplored axis of gene regulation; these delays shape the timing of the inflammatory response and may represent a target for therapeutic modulation.",
-    signalsForML: "Custom metric design (CoSI), sequence feature integration, quantitative kinetic modeling, foundation for downstream deep learning target generation.",
-    signalsForBio: "Kinetic splicing quantification at intron resolution, NF-κB transcriptome biology, integration of computational findings with minigene experimental validation.",
-    figurePlaceholderLabel: "Figure: CoSI kinetic profiles — bottleneck vs. non-bottleneck introns"
-  },
+  title: "Programmed Delayed Splicing in Inflammatory Gene Expression",
+  problem: "Inflammatory gene expression is often framed around rapid transcriptional activation, but productive mRNA output also depends on transcript processing. I asked whether delayed splicing in NF-κB–responsive genes reflects a reproducible, intron-specific regulatory feature, and whether regulatory sequence models could help nominate features associated with slow intron removal.",
+  data: "Kinetic RNA-seq time series from TNF-stimulated macrophages across multiple timepoints; intron-resolution splice-completion measurements across the NF-κB–responsive inflammatory transcriptome; genomic sequence context surrounding fast- and slow-splicing introns.",
+  whatIBuilt: "A computational regulatory genomics framework linking intron-resolution splicing kinetics to sequence-encoded features. I reanalyzed kinetic RNA-seq data, quantified splice completion across inflammatory introns, fine-tuned a genomic sequence model on macrophage time-course signal, and developed an interpretation workflow to prioritize candidate sequence features associated with delayed splicing.",
+  methodsStack: [
+    "STAR alignment and intron-level quantification of kinetic RNA-seq time-series data",
+    "Adapted Completed Splicing Index (CoSI) to measure splice completion per intron and timepoint",
+    "Python-based aggregation, normalization, and visualization across replicates and conditions",
+    "Actinomycin D shutoff analysis to estimate intron excision kinetics",
+    "Canonical sequence-feature analysis including splice-site strength, intron length, and GC content",
+    "Fine-tuning of Borzoi on macrophage inflammatory RNA-seq signal",
+    "Attribution-based model interpretation to identify high-importance sequence regions near slow-splicing introns",
+    "Motif enrichment analysis using FIMO / SEA to compare slow-splicing introns against background introns"
+  ],
+  result: "Identified a subset of inflammatory introns that behave as reproducible processing bottlenecks, delaying productive mRNA maturation beyond transcriptional activation alone. Weak 5′ splice donors contributed to delayed excision in selected introns, while model-guided interpretation nominated additional candidate sequence features associated with the slow-splicing class. First-author manuscript in review at eLife.",
+  whyItMatters: "This work highlights RNA processing kinetics as an important layer of immune gene regulation. By combining intron-resolution kinetics with regulatory sequence modeling, the project connects inflammatory transcript maturation to candidate cis-regulatory architecture beyond transcriptional activation alone.",
+  signalsForML: "Genomic foundation model fine-tuning, attribution-based interpretability, motif enrichment analysis, sequence-feature integration, custom metric design, quantitative kinetic modeling, reproducible regulatory genomics pipelines.",
+  signalsForBio: "Intron-resolution splicing kinetics, NF-κB–responsive inflammatory gene regulation, chromatin-associated RNA analysis, splice-site mechanism, minigene validation, computational nomination of candidate cis-regulatory features.",
+  figurePlaceholderLabel: "Figure: Model-guided interpretation nominates candidate sequence features near slow-splicing introns"
+},
   {
     title: "Modeling Immune Cell Type–Specific Splicing with Genomic Foundation Models",
     problem: "B cells, T cells, and macrophages share the same genome but exhibit distinct transcript isoform landscapes. I wanted to test whether genomic sequence models could learn features associated with immune cell type–specific splicing outcomes, and whether model representations could provide interpretable hypotheses about sequence-encoded regulation.",
