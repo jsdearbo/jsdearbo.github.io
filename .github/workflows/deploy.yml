@@ -27,13 +27,13 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: r-pkgs-shinylive-${{ hashFiles('shiny_apps/gwat_portfolio/app.R') }}
-          restore-keys: r-pkgs-shinylive-
+          key: r-pkgs-v2-${{ runner.os }}-r4.4-${{ hashFiles('shiny_apps/gwat_portfolio/app.R') }}
+          restore-keys: r-pkgs-v2-${{ runner.os }}-r4.4-
 
       - name: Install R packages
         run: |
-          Rscript -e "install.packages(c('shinylive', 'shiny', 'plotly', 'dplyr', 'stringr'),
-                        repos = 'https://cloud.r-project.org', Ncpus = 2)"
+          Rscript -e "install.packages(c('shinylive', 'shiny', 'plotly', 'dplyr', 'stringr'), repos = 'https://cloud.r-project.org')"
+          Rscript -e "stopifnot(requireNamespace('shinylive', quietly = TRUE)); cat('shinylive', as.character(packageVersion('shinylive')), 'ready\n')"
 
       - name: Export Shiny app with shinylive
         run: |

@@ -302,18 +302,22 @@ server <- function(input, output, session) {
   })
 
   output$vol_3wk <- renderPlotly({
+    req(input$padj_cut, input$lfc_cut)
     make_volcano(deseq_3wk, "3-Week post-induction gWAT: G12D vs. WT", input$padj_cut, input$lfc_cut)
   })
 
   output$vol_6wk <- renderPlotly({
+    req(input$padj_cut, input$lfc_cut)
     make_volcano(deseq_6wk, "6-Week post-induction gWAT: G12D vs. WT", input$padj_cut, input$lfc_cut)
   })
 
   output$gsea_3wk <- renderPlotly({
+    req(input$n_top)
     make_gsea(gsea_3wk, "Top Enriched Pathways — 3 Week gWAT (G12D vs. WT)", input$n_top)
   })
 
   output$gsea_6wk <- renderPlotly({
+    req(input$n_top)
     make_gsea(gsea_6wk, "Top Enriched Pathways — 6 Week gWAT (G12D vs. WT)", input$n_top)
   })
 }
