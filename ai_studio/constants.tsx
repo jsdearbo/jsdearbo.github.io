@@ -115,7 +115,8 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
   whyItMatters: "This work highlights RNA processing kinetics as an important layer of immune gene regulation. By combining intron-resolution kinetics with regulatory sequence modeling, the project connects inflammatory transcript maturation to candidate cis-regulatory architecture beyond transcriptional activation alone.",
   signalsForML: "Genomic foundation model fine-tuning, attribution-based interpretability, motif enrichment analysis, sequence-feature integration, custom metric design, quantitative kinetic modeling, reproducible regulatory genomics pipelines.",
   signalsForBio: "Intron-resolution splicing kinetics, NF-κB–responsive inflammatory gene regulation, chromatin-associated RNA analysis, splice-site mechanism, minigene validation, computational nomination of candidate cis-regulatory features.",
-  figurePlaceholderLabel: "Figure: Model-guided interpretation nominates candidate sequence features near slow-splicing introns"
+  figurePlaceholderLabel: "Figure: Model-guided interpretation nominates candidate sequence features near slow-splicing introns",
+  figureImagePath: "/assets/images/delay_splice/fig_6_illustrator.png",
 },
   {
     title: "Modeling Immune Cell Type–Specific Splicing with Genomic Foundation Models",
