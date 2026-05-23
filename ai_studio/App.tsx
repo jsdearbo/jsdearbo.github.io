@@ -146,6 +146,15 @@ const App: React.FC = () => {
             <Github size={18} className="text-teal-400" />
             <span>GitHub</span>
           </a>
+          <a
+            href="https://www.linkedin.com/in/jake-dearborn-15408652/"
+            target="_blank"
+            rel="noreferrer"
+            className="glass px-6 py-3 rounded-xl flex items-center gap-2 hover:border-cyan-500/50 transition-all"
+          >
+            <Linkedin size={18} className="text-cyan-400" />
+            <span>LinkedIn</span>
+          </a>
         </div>
       </div>
 
