@@ -32,7 +32,7 @@ export interface FigurePlaceholder {
 
 export interface MLEvidenceSection {
   title: string;
-  accentColor: 'blue' | 'green' | 'purple' | 'orange';
+  accentColor: 'blue' | 'green' | 'purple' | 'orange' | 'cyan' | 'teal';
   items: string[];
   figure?: FigurePlaceholder;
 }

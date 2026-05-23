@@ -207,11 +207,11 @@ export const ML_EVIDENCE_SECTIONS: MLEvidenceSection[] = [
       "Baseline benchmarking against simpler sequence-feature models",
       "Representation analysis using UMAP and KNN probes to assess whether fine-tuning makes PSI-relevant information more accessible in learned embeddings"
     ],
-    // figure: {
-    //   label: "Fine-tuning loss curves — Borzoi on splicing targets",
-    //   caption:
-    //     "Training and validation loss curves from Borzoi fine-tuning experiments on immune splicing prediction tasks."
-    // }
+    figure: {
+      label: "Borzoi fine-tuning: loss curves and prediction accuracy on splicing targets",
+      caption: "A: Training and validation MSE loss over 20 epochs. B–C: Predicted vs. measured splice completion for the pretrained (Pearson r=0.51) and fine-tuned (Pearson r=0.61, Spearman ρ=0.65) models, showing improved accuracy after task-specific adaptation.",
+      imagePath: "/assets/images/delay_splice/fig_5.png"
+    }
   },
   {
     title: "Training Infrastructure & HPC Workflows",
