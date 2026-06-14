@@ -116,7 +116,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
   signalsForML: "Genomic foundation model fine-tuning, attribution-based interpretability, motif enrichment analysis, sequence-feature integration, custom metric design, quantitative kinetic modeling, reproducible regulatory genomics pipelines.",
   signalsForBio: "Intron-resolution splicing kinetics, NF-κB–responsive inflammatory gene regulation, chromatin-associated RNA analysis, splice-site mechanism, minigene validation, computational nomination of candidate cis-regulatory features.",
   figurePlaceholderLabel: "Figure: Model-guided interpretation nominates candidate sequence features near slow-splicing introns",
-  figureImagePath: "/assets/images/delay_splice/fig_6_illustrator.png",
+  figureImagePath: "/assets/images/delay_splice/elife_fig_6_lightweight.JPG",
 },
   {
     title: "Modeling Immune Cell Type–Specific Splicing with Genomic Foundation Models",
