@@ -121,7 +121,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
   {
     title: "Modeling Immune Cell Type–Specific Splicing with Genomic Foundation Models",
     problem: "B cells, T cells, and macrophages share the same genome but exhibit distinct transcript isoform landscapes. I wanted to test whether genomic sequence models could learn features associated with immune cell type–specific splicing outcomes, and whether model representations could provide interpretable hypotheses about sequence-encoded regulation.",
-    data: "Bulk RNA-seq from three immune lineages: B cells, T cells, and macrophages.Genome-scale PSI and intron-retention labels generated from rMATS-derived splicing events and transcript-aware annotations.Pretrained Borzoi model weights using long genomic sequence context.",
+    data: "Bulk RNA-seq from three immune lineages: B cells, T cells, and macrophages. Genome-scale PSI and intron-retention labels generated from rMATS-derived splicing events and transcript-aware annotations. Pretrained Borzoi model weights using long genomic sequence context.",
     whatIBuilt: "A unified data engineering, modeling, and interpretation framework for immune cell type–specific splicing prediction.",
     methodsStack: [
       "Cell-type–specific GTF construction with StringTie using dominant isoform selection by TPM",
@@ -268,7 +268,7 @@ export const PUBLICATIONS: Publication[] = [
   {
     title: "Learning and probing sequence representations of immune cell alternative splicing.",
     authors: "Dearborn, J., et al.",
-    journal: "In Preparation",
+    journal: "In Preparation (preprint forthcoming)",
     year: "2026",
     status: "In Preparation"
   },
@@ -293,7 +293,8 @@ export const PUBLICATIONS: Publication[] = [
     authors: "Dearborn J, et al.",
     journal: "Biomaterials",
     year: "2021",
-    status: "Published"
+    status: "Published",
+    doi: "10.1016/j.biomaterials.2021.121029"
   }
 ];
 

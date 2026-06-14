@@ -115,7 +115,7 @@ const App: React.FC = () => {
           </p>
           <p className="text-sm text-gray-500 max-w-xl mx-auto">
             Seeking computational biologist, machine learning scientist, and scientific ML roles in biotech.
-            Defending June 2026 · University of Vermont
+            Defending June 2026 · University of Vermont · Available July 2026
           </p>
         </div>
 
@@ -129,7 +129,7 @@ const App: React.FC = () => {
             <ArrowRight size={16} />
           </button>
           <a
-            href="/Dearborn_CV_March_2026.pdf"
+            href="/Dearborn_CV.pdf"
             target="_blank"
             rel="noreferrer"
             className="glass px-6 py-3 rounded-xl flex items-center gap-2 hover:border-cyan-500/50 transition-all"
@@ -155,6 +155,24 @@ const App: React.FC = () => {
             <Linkedin size={18} className="text-cyan-400" />
             <span>LinkedIn</span>
           </a>
+          <a
+            href="https://scholar.google.com/citations?user=H0BSPawAAAAJ"
+            target="_blank"
+            rel="noreferrer"
+            className="glass px-6 py-3 rounded-xl flex items-center gap-2 hover:border-green-500/50 transition-all"
+          >
+            <ExternalLink size={18} className="text-green-400" />
+            <span>Scholar</span>
+          </a>
+          <a
+            href="https://orcid.org/0000-0001-8894-1574"
+            target="_blank"
+            rel="noreferrer"
+            className="glass px-6 py-3 rounded-xl flex items-center gap-2 hover:border-green-500/50 transition-all"
+          >
+            <ExternalLink size={18} className="text-green-400" />
+            <span>ORCID</span>
+          </a>
         </div>
       </div>
 
@@ -163,7 +181,7 @@ const App: React.FC = () => {
         <p className="text-xs font-bold uppercase tracking-widest text-gray-500 text-center mb-8">
           Selected Work
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {PORTFOLIO_CASES.map((c, i) => (
             <CaseStudyCard
               key={i}
@@ -200,8 +218,8 @@ const App: React.FC = () => {
           <span className="text-white font-medium italic">"Timing and Specificity in the Immune Transcriptome: Unraveling Splicing Dynamics through Computational Regulatory Genomics"</span>
         </p>
         <p className="text-gray-500 text-sm">
-          First-author manuscript on programmed delayed splicing currently{' '}
-          <span className="text-cyan-400">in review at eLife</span>. Recent collaborative work
+          First-author manuscript on programmed delayed splicing{' '}
+          <span className="text-cyan-400">available as a reviewed preprint at eLife</span>. Recent collaborative work
           published in <span className="italic">Cell Reports</span> (2025) and{' '}
           <span className="italic">ACS Nano</span> (2024).
         </p>
@@ -633,6 +651,8 @@ const App: React.FC = () => {
         <div className="flex gap-6">
           <a href="https://github.com/jsdearbo" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">GitHub</a>
           <a href="https://www.linkedin.com/in/jake-dearborn-15408652/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=H0BSPawAAAAJ" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Scholar</a>
+          <a href="https://orcid.org/0000-0001-8894-1574" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">ORCID</a>
           <a href="mailto:jakedearborn@gmail.com" className="hover:text-white transition-colors">Contact</a>
         </div>
       </footer>

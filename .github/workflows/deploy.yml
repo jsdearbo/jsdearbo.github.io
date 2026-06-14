@@ -72,7 +72,7 @@ jobs:
         run: |
           mkdir -p ai_studio/public/assets/images
           cp assets/images/headshot.jpg ai_studio/public/assets/images/headshot.jpg
-          cp Dearborn_CV_March_2026.pdf ai_studio/public/Dearborn_CV_March_2026.pdf
+          cp Dearborn_CV.pdf ai_studio/public/Dearborn_CV.pdf
 
       - name: Stage LNP analysis assets
         run: |
@@ -101,7 +101,7 @@ jobs:
       - name: Stage delay splice assets
         run: |
           mkdir -p ai_studio/public/assets/images/delay_splice
-          cp assets/images/delay_splice/*.png ai_studio/public/assets/images/delay_splice/
+          cp assets/images/delay_splice/* ai_studio/public/assets/images/delay_splice/
 
       - name: Build
         working-directory: ai_studio
