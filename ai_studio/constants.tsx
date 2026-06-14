@@ -266,7 +266,7 @@ export const PUBLICATIONS: Publication[] = [
     link: "https://elifesciences.org/reviewed-preprints/109726"
   },
   {
-    title: "Decoding immune cell type–specific alternative splicing regulatory programs.",
+    title: "Learning and probing sequence representations of immune cell alternative splicing.",
     authors: "Dearborn, J., et al.",
     journal: "In Preparation",
     year: "2026",
